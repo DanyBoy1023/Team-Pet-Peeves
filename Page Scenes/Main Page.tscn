@@ -1,0 +1,512 @@
+[gd_scene format=3 uid="uid://cu4gtqtor86l7"]
+
+[ext_resource type="Texture2D" uid="uid://c31mgprqx416j" path="res://icon.svg" id="1_t5bat"]
+[ext_resource type="Script" uid="uid://cryx8m3u4selk" path="res://Scripts/minigame_button.gd" id="2_sv2du"]
+
+[sub_resource type="Gradient" id="Gradient_sv2du"]
+colors = PackedColorArray(0.7254902, 0, 0.84313726, 1, 1, 0.53333336, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wifmv"]
+gradient = SubResource("Gradient_sv2du")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_t5bat"]
+offsets = PackedFloat32Array(0.018134715)
+colors = PackedColorArray(0, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sv2du"]
+gradient = SubResource("Gradient_t5bat")
+
+[sub_resource type="Animation" id="Animation_t5bat"]
+resource_name = "Fast Loading"
+length = 1.5
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.3, 25.5, 55, -0.4012782, 5.0159774, 0.40000004, -5, 100, -0.6, -3, 0, 0),
+"times": PackedFloat32Array(0, 0.8, 1.5)
+}
+
+[sub_resource type="Animation" id="Animation_sv2du"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sv2du"]
+_data = {
+&"Fast Loading": SubResource("Animation_t5bat"),
+&"RESET": SubResource("Animation_sv2du")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhqqe"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Control" type="Control" unique_id=643465008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1426322447]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_wifmv")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect" unique_id=123504655]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer" unique_id=701477408]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1676463922]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.23529412, 0.27450982, 1, 1)
+
+[node name="Tabs" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect" unique_id=1935477921]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs" unique_id=1033789342]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs" unique_id=1223910570]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs/MarginContainer" unique_id=521889520]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs/MarginContainer/HBoxContainer" unique_id=797299275]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.37716255, 0.37716258, 0.37716255, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs/MarginContainer/HBoxContainer" unique_id=1054696160]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.37716255, 0.37716258, 0.37716255, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs/MarginContainer/HBoxContainer" unique_id=755470012]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.37716255, 0.37716258, 0.37716255, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1781673188]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect3" unique_id=1638838023]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect3/MarginContainer" unique_id=1547402692]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect3/MarginContainer/HBoxContainer" unique_id=1545790563]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "File"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect3/MarginContainer/HBoxContainer" unique_id=1876217385]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Edit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect3/MarginContainer/HBoxContainer" unique_id=934569212]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Help"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1766969142]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="Tabs3" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2" unique_id=1716366797]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3" unique_id=868043819]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Adress:"
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3" unique_id=590241290]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 3
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3/MarginContainer" unique_id=1601793656]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3/MarginContainer/ColorRect" unique_id=801698482]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "ihateyou.com"
+
+[node name="ColorRect4" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1706514845]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect4" unique_id=1323593274]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 0.2
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture2D_sv2du")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect4" unique_id=1428049847 groups=["Loading Bar Animation"]]
+libraries/ = SubResource("AnimationLibrary_sv2du")
+
+[node name="Main Page" type="Control" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1595910861]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Main Scroll Website" type="ScrollContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page" unique_id=1254025811]
+layout_mode = 0
+offset_right = 752.0
+offset_bottom = 460.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website" unique_id=1456836885]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Website bg" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer" unique_id=1316315913]
+custom_minimum_size = Vector2(0, 586.475)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=510454674]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 27.0
+offset_right = 230.0
+offset_bottom = 94.0
+texture = ExtResource("1_t5bat")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=806184737]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 27.0
+offset_right = 634.0
+offset_bottom = 94.0
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/MarginContainer" unique_id=1659234211]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
+text = "Something ipsum something else of the thing in the something of there in the way"
+autowrap_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=1411000059]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 118.0
+offset_right = 489.0
+offset_bottom = 333.0
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/MarginContainer2" unique_id=1506598437]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
+text = "Something ipsum something else of the thing in the something of there in the way orem ipsum of the way of the other things in the way.
+Sometimes in the way of the thing in the some of the thing in then thin of hte thing"
+autowrap_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=516009415]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 131.0
+offset_right = 595.0
+offset_bottom = 241.0
+texture = ExtResource("1_t5bat")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=1947086107]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 601.0
+offset_top = 78.0
+offset_right = 710.0
+offset_bottom = 368.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel" unique_id=1602906064]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=1988935514]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer/MarginContainer" unique_id=2046325143]
+layout_mode = 2
+text = "something important"
+autowrap_mode = 2
+
+[node name="Control" type="Control" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=1297535765]
+custom_minimum_size = Vector2(0, 44.66)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=1790321248]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer/MarginContainer2" unique_id=547018042]
+layout_mode = 2
+text = "something else important"
+autowrap_mode = 2
+
+[node name="Panel2" type="Panel" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=567264003]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 290.0
+offset_right = 466.0
+offset_bottom = 360.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uhqqe")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel2" unique_id=1830387937]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel2/MarginContainer" unique_id=2080048522]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "idk, the something of the sometimes in the realm of the thing"
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=448903766]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 410.0
+offset_right = 576.0
+offset_bottom = 565.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=745905940]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=726612191]
+layout_mode = 2
+texture_normal = ExtResource("1_t5bat")
+script = ExtResource("2_sv2du")
+minigame_page = "res://Page Scenes/Minigame Page.tscn"
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=757315004]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "game 1"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=672904411]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer2" unique_id=475700572]
+layout_mode = 2
+texture = ExtResource("1_t5bat")
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer2" unique_id=1683328911]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "game 2"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=1469094123]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer3" unique_id=740035403]
+layout_mode = 2
+texture = ExtResource("1_t5bat")
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer3" unique_id=488820988]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "game 3"
+horizontal_alignment = 1
+
+[node name="Side Menu" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page" unique_id=1005523127]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 8.0
+offset_right = -629.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu" unique_id=189200978]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer" unique_id=628686808]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer" unique_id=2005576055]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "something in the way of these pictures that I don't know how I want this thing in the way of the thing"
+autowrap_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer" unique_id=147479072]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer/MarginContainer3" unique_id=1920837917]
+layout_mode = 2
+texture = ExtResource("1_t5bat")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="MarginContainer4" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer" unique_id=378637420]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer/MarginContainer4" unique_id=1856231788]
+layout_mode = 2
+texture = ExtResource("1_t5bat")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="MarginContainer5" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer" unique_id=280420343]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer/MarginContainer5" unique_id=1034949759]
+layout_mode = 2
+texture = ExtResource("1_t5bat")
+expand_mode = 5
+stretch_mode = 5

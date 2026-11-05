@@ -1,0 +1,475 @@
+[gd_scene format=3 uid="uid://chbhtvwo00ivv"]
+
+[ext_resource type="Texture2D" uid="uid://c31mgprqx416j" path="res://icon.svg" id="1_mubrq"]
+
+[sub_resource type="Gradient" id="Gradient_sv2du"]
+colors = PackedColorArray(0.7254902, 0, 0.84313726, 1, 1, 0.53333336, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mubrq"]
+gradient = SubResource("Gradient_sv2du")
+fill_to = Vector2(0, 1)
+
+[node name="Control" type="Control" unique_id=643465008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1426322447]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_mubrq")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect" unique_id=123504655]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer" unique_id=701477408]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Top Bar" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1676463922]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.23529412, 0.27450982, 1, 1)
+
+[node name="Tabs" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Top Bar" unique_id=1935477921]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Top Bar/Tabs" unique_id=1033789342]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Top Bar/Tabs" unique_id=1223910570]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Top Bar/Tabs/MarginContainer" unique_id=521889520]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Top Bar/Tabs/MarginContainer/HBoxContainer" unique_id=797299275]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.37716255, 0.37716258, 0.37716255, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Top Bar/Tabs/MarginContainer/HBoxContainer" unique_id=1054696160]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.37716255, 0.37716258, 0.37716255, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Top Bar/Tabs/MarginContainer/HBoxContainer" unique_id=755470012]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.37716255, 0.37716258, 0.37716255, 1)
+
+[node name="Settings Bar" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1781673188]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Settings Bar" unique_id=1638838023]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Settings Bar/MarginContainer" unique_id=1547402692]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Settings Bar/MarginContainer/HBoxContainer" unique_id=1545790563]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "File"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Settings Bar/MarginContainer/HBoxContainer" unique_id=1876217385]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Edit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Settings Bar/MarginContainer/HBoxContainer" unique_id=934569212]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Help"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Adress Bar" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1766969142]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="Tabs3" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Adress Bar" unique_id=1716366797]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Adress Bar/Tabs3" unique_id=868043819]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Adress:"
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Adress Bar/Tabs3" unique_id=590241290]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 3
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Adress Bar/Tabs3/MarginContainer" unique_id=1601793656]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Adress Bar/Tabs3/MarginContainer/ColorRect" unique_id=801698482]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "ihateyou.com"
+
+[node name="Separation Bar" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1706514845]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="Main Page" type="Control" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1595910861]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Main Scroll Website" type="ScrollContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page" unique_id=1254025811]
+layout_mode = 0
+offset_right = 752.0
+offset_bottom = 460.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website" unique_id=1456836885]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Website bg" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer" unique_id=1316315913]
+custom_minimum_size = Vector2(0, 586.475)
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=1853898008]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -211.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8039216, 0.49411765, 0.77254903, 1)
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=2101248532]
+layout_mode = 0
+offset_right = 531.0
+offset_bottom = 377.0
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/ColorRect" unique_id=1727751679]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = 18.0
+offset_right = -392.0
+offset_bottom = -251.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mubrq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/ColorRect" unique_id=362612200]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 147.0
+offset_top = 26.0
+offset_right = -33.0
+offset_bottom = -261.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "SLOW WALKERS"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/ColorRect" unique_id=2096821609]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 55.0
+offset_top = 153.0
+offset_right = -26.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "In this game you get to dodge around people and then you explode if you can't get out in time. it's a lot of fun and in a way is irum ipsum lorem ipsum loren in the epsilom of the orem ipsolumny "
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page" unique_id=366961163]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = 3.0
+offset_right = -12.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.67058825, 0.47843137, 0.7529412, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect" unique_id=1530768352]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer" unique_id=1270226656]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer" unique_id=435782240]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1776460588]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "idk something in the way "
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer" unique_id=327004914]
+custom_minimum_size = Vector2(0, 54.32)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect" unique_id=1155260608]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "something other than the something"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer" unique_id=402455554]
+custom_minimum_size = Vector2(0, 54.32)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect2" unique_id=272137263]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "something other than the something"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ColorRect3" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer" unique_id=194762288]
+custom_minimum_size = Vector2(0, 54.32)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect3" unique_id=819580585]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "something other than the something"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ColorRect4" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer" unique_id=645499489]
+custom_minimum_size = Vector2(0, 68.55)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect4" unique_id=533582631]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect4/MarginContainer" unique_id=1305105565]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect4/MarginContainer/VBoxContainer" unique_id=380403749]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+color = Color(0.06666667, 0.2, 0.7294118, 1)
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect4/MarginContainer/VBoxContainer/ColorRect" unique_id=16185271]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "   Something"
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect4/MarginContainer/VBoxContainer" unique_id=1844867472]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect4/MarginContainer/VBoxContainer/ColorRect2" unique_id=54910285]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect4/MarginContainer/VBoxContainer/ColorRect2/MarginContainer" unique_id=1076975513]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect4/MarginContainer/VBoxContainer/ColorRect2/MarginContainer/VBoxContainer" unique_id=617850772]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect4/MarginContainer/VBoxContainer/ColorRect2/MarginContainer/VBoxContainer/ColorRect" unique_id=261748955]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Something"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect4/MarginContainer/VBoxContainer/ColorRect2/MarginContainer/VBoxContainer" unique_id=1766726047]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label3" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/MarginContainer/VBoxContainer/ColorRect4/MarginContainer/VBoxContainer/ColorRect2/MarginContainer/VBoxContainer/ColorRect2" unique_id=965710207]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Something"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer" unique_id=1730277786]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/ColorRect" unique_id=1819950402]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/ColorRect/HBoxContainer" unique_id=1076285646]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "idk"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/ColorRect/VBoxContainer/ColorRect/HBoxContainer" unique_id=250764294]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "idk"
+horizontal_alignment = 1
