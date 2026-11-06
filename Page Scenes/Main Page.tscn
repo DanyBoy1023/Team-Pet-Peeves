@@ -3,13 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://c31mgprqx416j" path="res://icon.svg" id="1_t5bat"]
 [ext_resource type="Script" uid="uid://cryx8m3u4selk" path="res://Scripts/minigame_button.gd" id="2_sv2du"]
 
-[sub_resource type="Gradient" id="Gradient_sv2du"]
-colors = PackedColorArray(0.7254902, 0, 0.84313726, 1, 1, 0.53333336, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_wifmv"]
-gradient = SubResource("Gradient_sv2du")
-fill_to = Vector2(0, 1)
-
 [sub_resource type="Gradient" id="Gradient_t5bat"]
 offsets = PackedFloat32Array(0.018134715)
 colors = PackedColorArray(0, 0, 1, 1)
@@ -78,14 +71,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1426322447]
+[node name="TextureRect2" type="NinePatchRect" parent="." unique_id=1735371458]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -491.02423
+offset_top = 67.475464
+offset_right = 140.85059
+offset_bottom = 988.17065
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.5297771
+texture = ExtResource("1_t5bat")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TextureRect" type="NinePatchRect" parent="." unique_id=943886238]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_wifmv")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureRect" unique_id=123504655]
 layout_mode = 1
