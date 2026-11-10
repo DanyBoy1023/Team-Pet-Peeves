@@ -1,0 +1,63 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://d242s7se74yjn" path="res://Game Scenes/Dodge The Coughers/player.gd" id="1_player"]
+[ext_resource type="Texture2D" uid="uid://cxwp7unpol5a1" path="res://Game Scenes/Dodge The Coughers/art/player_up_1.png" id="2_up1"]
+[ext_resource type="Texture2D" uid="uid://cdpuulnywnqdh" path="res://Game Scenes/Dodge The Coughers/art/player_up_2.png" id="3_up2"]
+[ext_resource type="Texture2D" uid="uid://d2mr4c41j2b8h" path="res://Game Scenes/Dodge The Coughers/art/player_down_1.png" id="4_down1"]
+[ext_resource type="Texture2D" uid="uid://c382ykqqadn6e" path="res://Game Scenes/Dodge The Coughers/art/player_down_2.png" id="5_down2"]
+[ext_resource type="Texture2D" uid="uid://d0yqq5kkj334g" path="res://Game Scenes/Dodge The Coughers/art/player_side_1.png" id="6_side1"]
+[ext_resource type="Texture2D" uid="uid://b4s5jllhngp3a" path="res://Game Scenes/Dodge The Coughers/art/player_side_2.png" id="7_side2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_player"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_up1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_up2")
+}],
+"loop": true,
+"name": &"up",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_down1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_down2")
+}],
+"loop": true,
+"name": &"down",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_side1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_side2")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_player"]
+radius = 20.0
+height = 64.0
+
+[node name="Player" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_player")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_player")
+animation = &"up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_player")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

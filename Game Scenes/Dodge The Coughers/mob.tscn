@@ -1,0 +1,82 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://ba66h781d2imd" path="res://Game Scenes/Dodge The Coughers/mob.gd" id="1_mob"]
+[ext_resource type="Texture2D" uid="uid://bgp7vx48s375t" path="res://Game Scenes/Dodge The Coughers/art/sick_cough_1.png" id="2_c1"]
+[ext_resource type="Texture2D" uid="uid://yaktcwy7v1m7" path="res://Game Scenes/Dodge The Coughers/art/sick_cough_2.png" id="3_c2"]
+[ext_resource type="Texture2D" uid="uid://b0vkjhdgb4j2h" path="res://Game Scenes/Dodge The Coughers/art/sick_cough_3.png" id="4_c3"]
+[ext_resource type="Texture2D" uid="uid://bh6jqhr4d1a1o" path="res://Game Scenes/Dodge The Coughers/art/sick_sneeze_1.png" id="5_s1"]
+[ext_resource type="Texture2D" uid="uid://3bak7pvw18uq" path="res://Game Scenes/Dodge The Coughers/art/sick_sneeze_2.png" id="6_s2"]
+[ext_resource type="Texture2D" uid="uid://bxjdv7x1gmiug" path="res://Game Scenes/Dodge The Coughers/art/sick_sneeze_3.png" id="7_s3"]
+[ext_resource type="Texture2D" uid="uid://c6wqub02s0hhu" path="res://Game Scenes/Dodge The Coughers/art/sick_hack_1.png" id="8_h1"]
+[ext_resource type="Texture2D" uid="uid://6pnmlcvc7ovd" path="res://Game Scenes/Dodge The Coughers/art/sick_hack_2.png" id="9_h2"]
+[ext_resource type="Texture2D" uid="uid://bcmq4kinyup8u" path="res://Game Scenes/Dodge The Coughers/art/sick_hack_3.png" id="10_h3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mob"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c3")
+}],
+"loop": true,
+"name": &"cough",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_s1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_s3")
+}],
+"loop": true,
+"name": &"sneeze",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_h1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h3")
+}],
+"loop": true,
+"name": &"hack",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mob"]
+radius = 20.0
+height = 64.0
+
+[node name="Mob" type="RigidBody2D" groups=["mobs"]]
+collision_layer = 2
+collision_mask = 0
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp_mode = 1
+linear_damp = 0.0
+script = ExtResource("1_mob")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_mob")
+animation = &"cough"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_mob")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

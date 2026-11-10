@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://chbhtvwo00ivv"]
 
 [ext_resource type="Texture2D" uid="uid://c31mgprqx416j" path="res://icon.svg" id="1_mubrq"]
+[ext_resource type="PackedScene" uid="uid://d4f7clh0f4y6x" path="res://Game Scenes/Dodge The Coughers/main.tscn" id="2_iywuh"]
 
 [sub_resource type="Gradient" id="Gradient_sv2du"]
 colors = PackedColorArray(0.7254902, 0, 0.84313726, 1, 1, 0.53333336, 1, 1)
@@ -274,11 +275,7 @@ handle_input_locally = false
 size = Vector2i(531, 377)
 render_target_update_mode = 4
 
-[node name="Camera2D" type="Camera2D" parent="TextureRect/MarginContainer/Window/Page Holder/Main Scroll Website/VBoxContainer/Website bg/Game Screen/SubViewportContainer/SubViewport" unique_id=739189339]
-
-[node name="Sprite2D" type="Sprite2D" parent="TextureRect/MarginContainer/Window/Page Holder/Main Scroll Website/VBoxContainer/Website bg/Game Screen/SubViewportContainer/SubViewport" unique_id=247163147]
-position = Vector2(250, 155)
-texture = ExtResource("1_mubrq")
+[node name="Main" parent="TextureRect/MarginContainer/Window/Page Holder/Main Scroll Website/VBoxContainer/Website bg/Game Screen/SubViewportContainer/SubViewport" unique_id=450076993 instance=ExtResource("2_iywuh")]
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/Window/Page Holder" unique_id=366961163]
 layout_mode = 1

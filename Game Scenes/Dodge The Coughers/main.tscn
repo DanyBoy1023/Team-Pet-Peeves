@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://d4f7clh0f4y6x"]
+
+[ext_resource type="Script" uid="uid://cuvfurw13xcfq" path="res://Game Scenes/Dodge The Coughers/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://Game Scenes/Dodge The Coughers/mob.tscn" id="2_mob"]
+[ext_resource type="PackedScene" path="res://Game Scenes/Dodge The Coughers/player.tscn" id="3_player"]
+[ext_resource type="PackedScene" path="res://Game Scenes/Dodge The Coughers/hud.tscn" id="4_hud"]
+[ext_resource type="Script" uid="uid://diq07mmnp3msh" path="res://Game Scenes/Dodge The Coughers/background.gd" id="5_bg"]
+[ext_resource type="Texture2D" uid="uid://dwysloyx1vv77" path="res://Game Scenes/Dodge The Coughers/art/sidewalk.png" id="6_sidewalk"]
+[ext_resource type="AudioStream" uid="uid://bsl8cunssck7o" path="res://Game Scenes/Dodge The Coughers/Density & Time - MAZE ♫ NO COPYRIGHT 8-bit Music_mp3.ogg" id="7_kek77"]
+[ext_resource type="AudioStream" uid="uid://cjhsxfp7qj70v" path="res://Game Scenes/Dodge The Coughers/gameover.wav" id="8_death"]
+[ext_resource type="AudioStream" uid="uid://dme0fnppivauy" path="res://Game Scenes/Dodge The Coughers/cough.wav" id="9_cough"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_4c57u"]
+stream_count = 1
+stream_0 = ExtResource("7_kek77")
+
+[node name="Main" type="Node" unique_id=450076993]
+script = ExtResource("1_main")
+mob_scene = ExtResource("2_mob")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1132364519]
+size = Vector2i(480, 720)
+
+[node name="Background" type="Node2D" parent="." unique_id=19019080]
+texture_filter = 1
+script = ExtResource("5_bg")
+texture = ExtResource("6_sidewalk")
+
+[node name="Player" parent="." unique_id=1827071706 instance=ExtResource("3_player")]
+
+[node name="MobTimer" type="Timer" parent="." unique_id=1968261613]
+wait_time = 0.8
+
+[node name="ScoreTimer" type="Timer" parent="." unique_id=773396530]
+
+[node name="StartTimer" type="Timer" parent="." unique_id=1634891787]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPosition" type="Marker2D" parent="." unique_id=1573545726]
+position = Vector2(240, 560)
+
+[node name="HUD" parent="." unique_id=843503864 instance=ExtResource("4_hud")]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1444422101]
+stream = SubResource("AudioStreamPlaylist_4c57u")
+volume_db = -14.05
+pitch_scale = 0.58
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=919837918]
+stream = ExtResource("8_death")
+volume_db = -7.7
+pitch_scale = 0.43
+
+[node name="CoughSound" type="AudioStreamPlayer" parent="." unique_id=1280610477]
+stream = ExtResource("9_cough")
+volume_db = -4.0
+max_polyphony = 3
+
+[connection signal="hit" from="Player" to="." method="game_over"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="start_game" from="HUD" to="." method="new_game"]

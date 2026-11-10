@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bsl8cunssck7o"
+path="res://.godot/imported/Density & Time - MAZE ♫ NO COPYRIGHT 8-bit Music_mp3.ogg-5302dcc1e7fc9982796cd2ab76f80f61.oggvorbisstr"
+
+[deps]
+
+source_file="res://Game Scenes/Dodge The Coughers/Density & Time - MAZE ♫ NO COPYRIGHT 8-bit Music_mp3.ogg"
+dest_files=["res://.godot/imported/Density & Time - MAZE ♫ NO COPYRIGHT 8-bit Music_mp3.ogg-5302dcc1e7fc9982796cd2ab76f80f61.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
