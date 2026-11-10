@@ -1,0 +1,255 @@
+[gd_scene format=3 uid="uid://nyb3stnf20ty"]
+
+[ext_resource type="Texture2D" uid="uid://c31mgprqx416j" path="res://icon.svg" id="1_qchwi"]
+[ext_resource type="PackedScene" uid="uid://ckpm0bd3yvfjj" path="res://Window Scene/Main Page.tscn" id="2_546dp"]
+
+[sub_resource type="Gradient" id="Gradient_t5bat"]
+offsets = PackedFloat32Array(0.018134715)
+colors = PackedColorArray(0, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sv2du"]
+gradient = SubResource("Gradient_t5bat")
+
+[sub_resource type="Animation" id="Animation_t5bat"]
+resource_name = "Fast Loading"
+length = 1.5
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.3, 25.5, 55, -0.4012782, 5.0159774, 0.40000004, -5, 100, -0.6, -3, 0, 0),
+"times": PackedFloat32Array(0, 0.8, 1.5)
+}
+
+[sub_resource type="Animation" id="Animation_sv2du"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sv2du"]
+_data = {
+&"Fast Loading": SubResource("Animation_t5bat"),
+&"RESET": SubResource("Animation_sv2du")
+}
+
+[node name="Control" type="Control" unique_id=643465008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="NinePatchRect" parent="." unique_id=1735371458]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -491.02423
+offset_top = 67.475464
+offset_right = 140.85059
+offset_bottom = 988.17065
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.5297771
+texture = ExtResource("1_qchwi")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TextureRect" type="NinePatchRect" parent="." unique_id=943886238]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect" unique_id=123504655]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="Window" type="VBoxContainer" parent="TextureRect/MarginContainer" unique_id=701477408]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/Window" unique_id=1676463922]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.23529412, 0.27450982, 1, 1)
+
+[node name="Tabs" type="HBoxContainer" parent="TextureRect/MarginContainer/Window/ColorRect" unique_id=1935477921]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/Window/ColorRect/Tabs" unique_id=1033789342]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/Window/ColorRect/Tabs" unique_id=1223910570]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/Window/ColorRect/Tabs/MarginContainer" unique_id=521889520]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/Window/ColorRect/Tabs/MarginContainer/HBoxContainer" unique_id=797299275]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.37716255, 0.37716258, 0.37716255, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect/MarginContainer/Window/ColorRect/Tabs/MarginContainer/HBoxContainer" unique_id=1054696160]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.37716255, 0.37716258, 0.37716255, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="TextureRect/MarginContainer/Window/ColorRect/Tabs/MarginContainer/HBoxContainer" unique_id=755470012]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.37716255, 0.37716258, 0.37716255, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="TextureRect/MarginContainer/Window" unique_id=1781673188]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/Window/ColorRect3" unique_id=1638838023]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/Window/ColorRect3/MarginContainer" unique_id=1547402692]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/Window/ColorRect3/MarginContainer/HBoxContainer" unique_id=1545790563]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "File"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/Window/ColorRect3/MarginContainer/HBoxContainer" unique_id=1876217385]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Edit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="TextureRect/MarginContainer/Window/ColorRect3/MarginContainer/HBoxContainer" unique_id=934569212]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Help"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect/MarginContainer/Window" unique_id=1766969142]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="Tabs3" type="HBoxContainer" parent="TextureRect/MarginContainer/Window/ColorRect2" unique_id=1716366797]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/Window/ColorRect2/Tabs3" unique_id=868043819]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Adress:"
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/Window/ColorRect2/Tabs3" unique_id=590241290]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 3
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/Window/ColorRect2/Tabs3/MarginContainer" unique_id=1601793656]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/Window/ColorRect2/Tabs3/MarginContainer/ColorRect" unique_id=801698482]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "ihateyou.com"
+
+[node name="ColorRect4" type="ColorRect" parent="TextureRect/MarginContainer/Window" unique_id=1706514845]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="TextureRect/MarginContainer/Window/ColorRect4" unique_id=1323593274]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 0.2
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture2D_sv2du")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/MarginContainer/Window/ColorRect4" unique_id=1428049847 groups=["Loading Bar Animation"]]
+libraries/ = SubResource("AnimationLibrary_sv2du")
+
+[node name="Page Holder" type="Control" parent="TextureRect/MarginContainer/Window" unique_id=1595910861]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Main Page" parent="TextureRect/MarginContainer/Window/Page Holder" unique_id=1450871916 instance=ExtResource("2_546dp")]
+layout_mode = 1
+
+[editable path="TextureRect/MarginContainer/Window/Page Holder/Main Page"]

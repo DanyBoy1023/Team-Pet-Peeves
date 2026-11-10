@@ -1,6 +1,6 @@
 extends BaseButton
 
-@export_file_path("*.tscn") var minigame_page: String
+@export var minigame_page: PackedScene
 
 func _ready() -> void:
 	pressed.connect(go_to_page)
@@ -10,4 +10,4 @@ func go_to_page():
 	if anim_player.is_playing(): return
 	anim_player.play("Fast Loading")
 	await anim_player.animation_finished
-	get_tree().change_scene_to_file(minigame_page)
+	PageController.go_to_page(minigame_page)

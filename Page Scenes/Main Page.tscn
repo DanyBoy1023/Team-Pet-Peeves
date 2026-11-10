@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://c31mgprqx416j" path="res://icon.svg" id="1_t5bat"]
 [ext_resource type="Script" uid="uid://cryx8m3u4selk" path="res://Scripts/minigame_button.gd" id="2_sv2du"]
+[ext_resource type="Script" uid="uid://c1ojluigrph6a" path="res://Page Scenes/page button controller.gd" id="2_wifmv"]
+[ext_resource type="PackedScene" uid="uid://chbhtvwo00ivv" path="res://Page Scenes/Minigame Page.tscn" id="3_sv2du"]
 
 [sub_resource type="Gradient" id="Gradient_t5bat"]
 offsets = PackedFloat32Array(0.018134715)
@@ -212,11 +214,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_wifmv")
+
+[node name="Back Page Button" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3" unique_id=13597038]
+layout_mode = 2
+text = "<"
+
+[node name="Forward Page Button" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3" unique_id=859871216]
+layout_mode = 2
+text = ">"
 
 [node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3" unique_id=868043819]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Adress:"
 horizontal_alignment = 2
@@ -413,7 +422,7 @@ layout_mode = 2
 layout_mode = 2
 texture_normal = ExtResource("1_t5bat")
 script = ExtResource("2_sv2du")
-minigame_page = "res://Page Scenes/Minigame Page.tscn"
+minigame_page = ExtResource("3_sv2du")
 
 [node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=757315004]
 layout_mode = 2
@@ -520,3 +529,6 @@ layout_mode = 2
 texture = ExtResource("1_t5bat")
 expand_mode = 5
 stretch_mode = 5
+
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3/Back Page Button" to="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3" method="_on_back_page_button_pressed"]
+[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3/Forward Page Button" to="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3" method="_on_forward_page_button_pressed"]
