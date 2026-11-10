@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://do0jhshlfv7xi"]
+
+[ext_resource type="Texture2D" uid="uid://dwysloyx1vv77" path="res://Game Scenes/Dodge The Coughers/art/sidewalk.png" id="1_avyp0"]
+
+[node name="Node3D" type="Node3D" unique_id=1104532555]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1760712824]
+transform = Transform3D(1, 0, 0, 0, 0.13747889, 0.9905047, 0, -0.9905047, 0.13747889, 0, -0.8065766, -2.644855)
+texture = ExtResource("1_avyp0")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=774861587]

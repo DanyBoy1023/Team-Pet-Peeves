@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://cu4gtqtor86l7"]
 
+[ext_resource type="Texture2D" uid="uid://betcx8qinb2m1" path="res://Website Art/gradient.png" id="1_6xhdm"]
 [ext_resource type="Texture2D" uid="uid://c31mgprqx416j" path="res://icon.svg" id="1_t5bat"]
+[ext_resource type="Script" uid="uid://dvub7iqk10rx7" path="res://Page Scenes/mouse paralax.gd" id="2_jtqhn"]
 [ext_resource type="Script" uid="uid://cryx8m3u4selk" path="res://Scripts/minigame_button.gd" id="2_sv2du"]
 [ext_resource type="Script" uid="uid://c1ojluigrph6a" path="res://Page Scenes/page button controller.gd" id="2_wifmv"]
-[ext_resource type="PackedScene" uid="uid://chbhtvwo00ivv" path="res://Page Scenes/Minigame Page.tscn" id="3_sv2du"]
+[ext_resource type="Texture2D" uid="uid://b4xlql0oioey7" path="res://Game Scenes/Dodge The Coughers/icon.png" id="3_p2734"]
+[ext_resource type="PackedScene" uid="uid://chbhtvwo00ivv" path="res://Page Scenes/Game Page Scenes/Dodge The Coughers Page.tscn" id="3_sv2du"]
 
 [sub_resource type="Gradient" id="Gradient_t5bat"]
 offsets = PackedFloat32Array(0.018134715)
@@ -65,7 +68,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[node name="Control" type="Control" unique_id=643465008]
+[node name="Control3" type="Control" unique_id=643465008]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,16 +81,18 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -491.02423
-offset_top = 67.475464
-offset_right = 140.85059
-offset_bottom = 988.17065
+offset_left = -2707.0
+offset_top = -2858.0
+offset_right = 2728.0
+offset_bottom = 2355.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.5297771
-texture = ExtResource("1_t5bat")
+offset_transform_enabled = true
+offset_transform_rotation = -0.5235988
+texture = ExtResource("1_6xhdm")
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
+script = ExtResource("2_jtqhn")
 
 [node name="TextureRect" type="NinePatchRect" parent="." unique_id=943886238]
 layout_mode = 1
@@ -106,9 +111,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 200
+theme_override_constants/margin_left = 100
 theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 200
+theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 50
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer" unique_id=701477408]
@@ -276,9 +281,12 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Main Scroll Website" type="ScrollContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page" unique_id=1254025811]
-layout_mode = 0
-offset_right = 752.0
-offset_bottom = 460.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website" unique_id=1456836885]
@@ -420,7 +428,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureButton" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=726612191]
 layout_mode = 2
-texture_normal = ExtResource("1_t5bat")
+texture_normal = ExtResource("3_p2734")
 script = ExtResource("2_sv2du")
 minigame_page = ExtResource("3_sv2du")
 
@@ -462,8 +470,9 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 8.0
-offset_right = -629.0
+offset_top = 3.0
+offset_right = -340.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
@@ -488,7 +497,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
-text = "something in the way of these pictures that I don't know how I want this thing in the way of the thing"
+text = "something in the way of these "
 autowrap_mode = 2
 
 [node name="MarginContainer3" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer" unique_id=147479072]
@@ -512,19 +521,6 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer/MarginContainer4" unique_id=1856231788]
-layout_mode = 2
-texture = ExtResource("1_t5bat")
-expand_mode = 5
-stretch_mode = 5
-
-[node name="MarginContainer5" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer" unique_id=280420343]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer/MarginContainer5" unique_id=1034949759]
 layout_mode = 2
 texture = ExtResource("1_t5bat")
 expand_mode = 5
