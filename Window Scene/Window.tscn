@@ -2,6 +2,71 @@
 
 [ext_resource type="Script" uid="uid://c1ojluigrph6a" path="res://Page Scenes/page button controller.gd" id="1_0aqkh"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_546dp"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.07058824, 0.2, 0.7294118, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6hic"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yr65p"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ipr5"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66a14"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 5
+
 [sub_resource type="Gradient" id="Gradient_t5bat"]
 offsets = PackedFloat32Array(0.018134715)
 colors = PackedColorArray(0, 0, 1, 1)
@@ -58,13 +123,13 @@ theme_override_constants/margin_bottom = 50
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=326634183]
 layout_mode = 2
-theme_override_constants/separation = 1
+theme_override_constants/separation = 0
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer" unique_id=82847744]
+[node name="ColorRect" type="Panel" parent="VBoxContainer" unique_id=508243372]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 size_flags_horizontal = 3
-color = Color(0.23529412, 0.27450982, 1, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_546dp")
 
 [node name="Tabs" type="HBoxContainer" parent="VBoxContainer/ColorRect" unique_id=1966180626]
 layout_mode = 1
@@ -78,6 +143,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Bob's Torture Website"
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ColorRect/Tabs" unique_id=647115410]
 custom_minimum_size = Vector2(100, 0)
@@ -105,10 +171,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 color = Color(0.37716255, 0.37716258, 0.37716255, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="VBoxContainer" unique_id=1744494749]
+[node name="ColorRect3" type="Panel" parent="VBoxContainer" unique_id=211912819]
 custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
-color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_c6hic")
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ColorRect3" unique_id=606175453]
 layout_mode = 1
@@ -143,14 +209,38 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
+text = "View"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer/ColorRect3/MarginContainer/HBoxContainer" unique_id=288554914]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Go"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer/ColorRect3/MarginContainer/HBoxContainer" unique_id=1907580231]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Favorites"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer/ColorRect3/MarginContainer/HBoxContainer" unique_id=163748045]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
 text = "Help"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer" unique_id=517660165]
+[node name="ColorRect2" type="Panel" parent="VBoxContainer" unique_id=362283413]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
-color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_yr65p")
 script = ExtResource("1_0aqkh")
 
 [node name="Tabs3" type="HBoxContainer" parent="VBoxContainer/ColorRect2" unique_id=1552679965]
@@ -183,11 +273,12 @@ theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 1
 theme_override_constants/margin_bottom = 3
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/ColorRect2/Tabs3/MarginContainer" unique_id=816834354]
+[node name="Panel" type="Panel" parent="VBoxContainer/ColorRect2/Tabs3/MarginContainer" unique_id=1867607832]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_4ipr5")
 
-[node name="Label" type="Label" parent="VBoxContainer/ColorRect2/Tabs3/MarginContainer/ColorRect" unique_id=478278212]
+[node name="Label" type="Label" parent="VBoxContainer/ColorRect2/Tabs3/MarginContainer/Panel" unique_id=478278212]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -195,12 +286,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "ihateyou.com"
+text = "www.ihateyou.com"
 
-[node name="ColorRect4" type="ColorRect" parent="VBoxContainer" unique_id=103393813]
+[node name="ColorRect4" type="Panel" parent="VBoxContainer" unique_id=662024221]
 custom_minimum_size = Vector2(0, 4)
 layout_mode = 2
-color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_66a14")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="VBoxContainer/ColorRect4" unique_id=1360868659]
 layout_mode = 1
