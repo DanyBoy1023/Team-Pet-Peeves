@@ -66,7 +66,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[node name="Control" type="Control" unique_id=643465008]
+[node name="Control3" type="Control" unique_id=643465008]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -74,55 +74,26 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect2" type="NinePatchRect" parent="." unique_id=1735371458]
+[node name="Background" type="NinePatchRect" parent="." unique_id=1735371458]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -491.02423
-offset_top = 67.475464
-offset_right = 140.85059
-offset_bottom = 988.17065
+offset_left = -2707.0
+offset_top = -2858.0
+offset_right = 2728.0
+offset_bottom = 2355.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.5297771
-texture = ExtResource("1_t5bat")
+offset_transform_enabled = true
+offset_transform_rotation = -0.5235988
+texture = ExtResource("1_6xhdm")
+region_rect = Rect2(0, 0, 1065, 1065)
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
+script = ExtResource("2_jtqhn")
 
-[node name="TextureRect" type="NinePatchRect" parent="." unique_id=943886238]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="TextureRect" unique_id=123504655]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 200
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 200
-theme_override_constants/margin_bottom = 50
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer" unique_id=701477408]
-layout_mode = 2
-theme_override_constants/separation = 1
-
-[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1676463922]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.23529412, 0.27450982, 1, 1)
-
-[node name="Tabs" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect" unique_id=1935477921]
+[node name="Window" type="Control" parent="." unique_id=339981141]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -130,186 +101,121 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs" unique_id=1033789342]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+[node name="MarginContainer" parent="Window" unique_id=1910592968 instance=ExtResource("3_sv2du")]
+layout_mode = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs" unique_id=1223910570]
+[node name="ColorRect2" parent="Window/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1910592968, 326634183) index="2" unique_id=517660165]
+custom_minimum_size = Vector2(0, 20)
+
+[node name="Back Page Button" parent="Window/MarginContainer/VBoxContainer/ColorRect2/Tabs3" parent_id_path=PackedInt32Array(1910592968, 1552679965) index="0" unique_id=624004011]
+custom_maximum_size = Vector2(-1, 20)
+
+[node name="Forward Page Button" parent="Window/MarginContainer/VBoxContainer/ColorRect2/Tabs3" parent_id_path=PackedInt32Array(1910592968, 1552679965) index="1" unique_id=75699495]
+custom_maximum_size = Vector2(-1, 20)
+
+[node name="Main Page" type="Control" parent="Window/MarginContainer/VBoxContainer/Page Holder" parent_id_path=PackedInt32Array(1910592968, 1493986912) index="0" unique_id=540355734]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page" unique_id=788334065]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Side Menu" type="ColorRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer" unique_id=1036107268]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Side Menu" unique_id=1070784099]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 3
-theme_override_constants/margin_top = 3
-theme_override_constants/margin_right = 3
-theme_override_constants/margin_bottom = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs/MarginContainer" unique_id=521889520]
-layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs/MarginContainer/HBoxContainer" unique_id=797299275]
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.37716255, 0.37716258, 0.37716255, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs/MarginContainer/HBoxContainer" unique_id=1054696160]
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.37716255, 0.37716258, 0.37716255, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect/Tabs/MarginContainer/HBoxContainer" unique_id=755470012]
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(0.37716255, 0.37716258, 0.37716255, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1781673188]
-custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
-color = Color(0.8509804, 0.8509804, 0.8509804, 1)
-
-[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect3" unique_id=1638838023]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 5
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect3/MarginContainer" unique_id=1547402692]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect3/MarginContainer/HBoxContainer" unique_id=1545790563]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 10
-text = "File"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect3/MarginContainer/HBoxContainer" unique_id=1876217385]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 10
-text = "Edit"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label3" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect3/MarginContainer/HBoxContainer" unique_id=934569212]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 10
-text = "Help"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ColorRect2" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1766969142]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-color = Color(0.8509804, 0.8509804, 0.8509804, 1)
-script = ExtResource("2_wifmv")
-
-[node name="Tabs3" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2" unique_id=1716366797]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Back Page Button" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3" unique_id=13597038]
-layout_mode = 2
-text = "<"
-
-[node name="Forward Page Button" type="Button" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3" unique_id=859871216]
-layout_mode = 2
-text = ">"
-
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3" unique_id=868043819]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Adress:"
-horizontal_alignment = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3" unique_id=590241290]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 1
 theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 1
 theme_override_constants/margin_bottom = 3
 
-[node name="ColorRect" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3/MarginContainer" unique_id=1601793656]
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Side Menu/MarginContainer" unique_id=1040661261]
 layout_mode = 2
-size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3/MarginContainer/ColorRect" unique_id=801698482]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Side Menu/MarginContainer/VBoxContainer" unique_id=565366198]
+layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "ihateyou.com"
+theme_override_font_sizes/font_size = 10
+text = "something in the way of these "
+autowrap_mode = 2
 
-[node name="ColorRect4" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1706514845]
-custom_minimum_size = Vector2(0, 4)
+[node name="MarginContainer3" type="MarginContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Side Menu/MarginContainer/VBoxContainer" unique_id=692100061]
 layout_mode = 2
-color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect4" unique_id=1323593274]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-step = 0.2
-nine_patch_stretch = true
-texture_progress = SubResource("GradientTexture2D_sv2du")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/MarginContainer/VBoxContainer/ColorRect4" unique_id=1428049847 groups=["Loading Bar Animation"]]
-libraries/ = SubResource("AnimationLibrary_sv2du")
-
-[node name="Main Page" type="Control" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1595910861]
+[node name="TextureRect" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Side Menu/MarginContainer/VBoxContainer/MarginContainer3" unique_id=46148095]
 layout_mode = 2
-size_flags_vertical = 3
+texture = ExtResource("4_6xhdm")
+expand_mode = 5
+stretch_mode = 5
 
-[node name="Main Scroll Website" type="ScrollContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page" unique_id=1254025811]
-layout_mode = 0
-offset_right = 752.0
-offset_bottom = 460.0
+[node name="MarginContainer4" type="MarginContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Side Menu/MarginContainer/VBoxContainer" unique_id=359049458]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Side Menu/MarginContainer/VBoxContainer/MarginContainer4" unique_id=1573597952]
+layout_mode = 2
+texture = ExtResource("4_6xhdm")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Main Scroll Website" type="ScrollContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer" unique_id=1442718066]
+layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website" unique_id=1456836885]
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website" unique_id=1140030748]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Website bg" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer" unique_id=1316315913]
+[node name="Website bg" type="ColorRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer" unique_id=1109779680]
 custom_minimum_size = Vector2(0, 586.475)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=510454674]
+[node name="TextureRect" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=601176658]
 layout_mode = 0
-offset_left = 163.0
+offset_left = 32.0
 offset_top = 27.0
-offset_right = 230.0
+offset_right = 99.0
 offset_bottom = 94.0
-texture = ExtResource("1_t5bat")
+texture = ExtResource("4_6xhdm")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=806184737]
+[node name="MarginContainer" type="MarginContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=1844312206]
 layout_mode = 0
-offset_left = 234.0
+offset_left = 109.0
 offset_top = 27.0
-offset_right = 634.0
+offset_right = 509.0
 offset_bottom = 94.0
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/MarginContainer" unique_id=1659234211]
+[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/MarginContainer" unique_id=947687172]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -317,14 +223,14 @@ theme_override_colors/font_outline_color = Color(0.34407577, 0.34407574, 0.34407
 text = "Something ipsum something else of the thing in the something of there in the way"
 autowrap_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=1411000059]
+[node name="MarginContainer2" type="MarginContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=1518106305]
 layout_mode = 0
-offset_left = 135.0
+offset_left = 36.0
 offset_top = 118.0
-offset_right = 489.0
+offset_right = 390.0
 offset_bottom = 333.0
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/MarginContainer2" unique_id=1506598437]
+[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/MarginContainer2" unique_id=1941973795]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -333,24 +239,24 @@ text = "Something ipsum something else of the thing in the something of there in
 Sometimes in the way of the thing in the some of the thing in then thin of hte thing"
 autowrap_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=516009415]
+[node name="TextureRect2" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=373391517]
 layout_mode = 0
-offset_left = 489.0
-offset_top = 131.0
-offset_right = 595.0
-offset_bottom = 241.0
-texture = ExtResource("1_t5bat")
+offset_left = 300.0
+offset_top = 179.0
+offset_right = 406.0
+offset_bottom = 289.0
+texture = ExtResource("4_6xhdm")
 expand_mode = 1
 
-[node name="Panel" type="Panel" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=1947086107]
+[node name="Panel" type="Panel" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=1531240379]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 601.0
+offset_left = 409.0
 offset_top = 78.0
-offset_right = 710.0
+offset_right = 518.0
 offset_bottom = 368.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel" unique_id=1602906064]
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel" unique_id=1562579367]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -358,39 +264,39 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=1988935514]
+[node name="MarginContainer" type="MarginContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=1977823191]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer/MarginContainer" unique_id=2046325143]
+[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer/MarginContainer" unique_id=1350266970]
 layout_mode = 2
 text = "something important"
 autowrap_mode = 2
 
-[node name="Control" type="Control" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=1297535765]
+[node name="Control" type="Control" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=829906347]
 custom_minimum_size = Vector2(0, 44.66)
 layout_mode = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=1790321248]
+[node name="MarginContainer2" type="MarginContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=1162635076]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_right = 5
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer/MarginContainer2" unique_id=547018042]
+[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer/MarginContainer2" unique_id=1419103335]
 layout_mode = 2
 text = "something else important"
 autowrap_mode = 2
 
-[node name="Panel2" type="Panel" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=567264003]
+[node name="Panel2" type="Panel" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=323374978]
 layout_mode = 0
-offset_left = 132.0
-offset_top = 290.0
-offset_right = 466.0
-offset_bottom = 360.0
+offset_left = 43.0
+offset_top = 296.0
+offset_right = 377.0
+offset_bottom = 366.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_uhqqe")
 
-[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel2" unique_id=1830387937]
+[node name="MarginContainer" type="MarginContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel2" unique_id=1169585301]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -402,134 +308,59 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/Panel2/MarginContainer" unique_id=2080048522]
+[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel2/MarginContainer" unique_id=788452249]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "idk, the something of the sometimes in the realm of the thing"
 autowrap_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg" unique_id=448903766]
+[node name="HBoxContainer" type="HBoxContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=1998654723]
 layout_mode = 0
-offset_left = 131.0
-offset_top = 410.0
-offset_right = 576.0
-offset_bottom = 565.0
+offset_left = 57.0
+offset_top = 394.0
+offset_right = 502.0
+offset_bottom = 549.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=745905940]
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=1979335623]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureButton" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=726612191]
+[node name="TextureRect" type="TextureButton" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=1333674252]
 layout_mode = 2
 texture_normal = ExtResource("3_p2734")
 script = ExtResource("2_sv2du")
 minigame_page = ExtResource("3_sv2du")
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=757315004]
+[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=561807731]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "game 1"
 horizontal_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=672904411]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=2043236854]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer2" unique_id=475700572]
+[node name="TextureRect" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer2" unique_id=1403179761]
 layout_mode = 2
-texture = ExtResource("1_t5bat")
+texture = ExtResource("4_6xhdm")
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer2" unique_id=1683328911]
+[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer2" unique_id=1652403430]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "game 2"
 horizontal_alignment = 1
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=1469094123]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=2120608475]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer3" unique_id=740035403]
+[node name="TextureRect" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer3" unique_id=528226649]
 layout_mode = 2
-texture = ExtResource("1_t5bat")
+texture = ExtResource("4_6xhdm")
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer3" unique_id=488820988]
+[node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Main Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer3" unique_id=697574501]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "game 3"
 horizontal_alignment = 1
 
-[node name="Side Menu" type="ColorRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page" unique_id=1005523127]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 8.0
-offset_right = -629.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-color = Color(0.8509804, 0.8509804, 0.8509804, 1)
-
-[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu" unique_id=189200978]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 3
-theme_override_constants/margin_top = 3
-theme_override_constants/margin_right = 1
-theme_override_constants/margin_bottom = 3
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer" unique_id=628686808]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer" unique_id=2005576055]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 10
-text = "something in the way of these pictures that I don't know how I want this thing in the way of the thing"
-autowrap_mode = 2
-
-[node name="MarginContainer3" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer" unique_id=147479072]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer/MarginContainer3" unique_id=1920837917]
-layout_mode = 2
-texture = ExtResource("1_t5bat")
-expand_mode = 5
-stretch_mode = 5
-
-[node name="MarginContainer4" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer" unique_id=378637420]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer/MarginContainer4" unique_id=1856231788]
-layout_mode = 2
-texture = ExtResource("1_t5bat")
-expand_mode = 5
-stretch_mode = 5
-
-[node name="MarginContainer5" type="MarginContainer" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer" unique_id=280420343]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="TextureRect" type="TextureRect" parent="TextureRect/MarginContainer/VBoxContainer/Main Page/Side Menu/MarginContainer/VBoxContainer/MarginContainer5" unique_id=1034949759]
-layout_mode = 2
-texture = ExtResource("1_t5bat")
-expand_mode = 5
-stretch_mode = 5
-
-[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3/Back Page Button" to="TextureRect/MarginContainer/VBoxContainer/ColorRect2" method="_on_back_page_button_pressed"]
-[connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/ColorRect2/Tabs3/Forward Page Button" to="TextureRect/MarginContainer/VBoxContainer/ColorRect2" method="_on_forward_page_button_pressed"]
+[editable path="Window/MarginContainer"]

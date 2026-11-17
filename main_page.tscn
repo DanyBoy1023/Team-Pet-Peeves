@@ -1,0 +1,273 @@
+[gd_scene format=3 uid="uid://041eqkjorjch"]
+
+[ext_resource type="Texture2D" uid="uid://c31mgprqx416j" path="res://icon.svg" id="1_5mpow"]
+[ext_resource type="Texture2D" uid="uid://b4xlql0oioey7" path="res://Game Scenes/Dodge The Coughers/icon.png" id="2_75dro"]
+[ext_resource type="Script" uid="uid://cryx8m3u4selk" path="res://Scripts/minigame_button.gd" id="3_pbtym"]
+[ext_resource type="PackedScene" uid="uid://chbhtvwo00ivv" path="res://Page Scenes/Game Page Scenes/Dodge The Coughers Window.tscn" id="4_btl6j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhqqe"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(1, 1, 1, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="Main Page" type="Control" unique_id=540355734]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=788334065]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Side Menu" type="ColorRect" parent="HBoxContainer" unique_id=1036107268]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Side Menu" unique_id=1070784099]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Side Menu/MarginContainer" unique_id=1040661261]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/Side Menu/MarginContainer/VBoxContainer" unique_id=565366198]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "something in the way of these "
+autowrap_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/Side Menu/MarginContainer/VBoxContainer" unique_id=692100061]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Side Menu/MarginContainer/VBoxContainer/MarginContainer3" unique_id=46148095]
+layout_mode = 2
+texture = ExtResource("1_5mpow")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer/Side Menu/MarginContainer/VBoxContainer" unique_id=359049458]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Side Menu/MarginContainer/VBoxContainer/MarginContainer4" unique_id=1573597952]
+layout_mode = 2
+texture = ExtResource("1_5mpow")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Main Scroll Website" type="ScrollContainer" parent="HBoxContainer" unique_id=1442718066]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Main Scroll Website" unique_id=1140030748]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Website bg" type="ColorRect" parent="HBoxContainer/Main Scroll Website/VBoxContainer" unique_id=1109779680]
+custom_minimum_size = Vector2(0, 586.475)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=601176658]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 27.0
+offset_right = 99.0
+offset_bottom = 94.0
+texture = ExtResource("1_5mpow")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=1844312206]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 27.0
+offset_right = 509.0
+offset_bottom = 94.0
+
+[node name="Label" type="Label" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/MarginContainer" unique_id=947687172]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
+text = "Something ipsum something else of the thing in the something of there in the way"
+autowrap_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=1518106305]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 118.0
+offset_right = 390.0
+offset_bottom = 333.0
+
+[node name="Label" type="Label" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/MarginContainer2" unique_id=1941973795]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.34407577, 0.34407574, 0.34407574, 1)
+text = "Something ipsum something else of the thing in the something of there in the way orem ipsum of the way of the other things in the way.
+Sometimes in the way of the thing in the some of the thing in then thin of hte thing"
+autowrap_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=373391517]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 179.0
+offset_right = 406.0
+offset_bottom = 289.0
+texture = ExtResource("1_5mpow")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=1531240379]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 409.0
+offset_top = 78.0
+offset_right = 518.0
+offset_bottom = 368.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel" unique_id=1562579367]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=1977823191]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer/MarginContainer" unique_id=1350266970]
+layout_mode = 2
+text = "something important"
+autowrap_mode = 2
+
+[node name="Control" type="Control" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=829906347]
+custom_minimum_size = Vector2(0, 44.66)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer" unique_id=1162635076]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel/VBoxContainer/MarginContainer2" unique_id=1419103335]
+layout_mode = 2
+text = "something else important"
+autowrap_mode = 2
+
+[node name="Panel2" type="Panel" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=323374978]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 296.0
+offset_right = 377.0
+offset_bottom = 366.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uhqqe")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel2" unique_id=1169585301]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/Panel2/MarginContainer" unique_id=788452249]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "idk, the something of the sometimes in the realm of the thing"
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=1998654723]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 394.0
+offset_right = 502.0
+offset_bottom = 549.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=1979335623]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureButton" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=1333674252]
+layout_mode = 2
+texture_normal = ExtResource("2_75dro")
+script = ExtResource("3_pbtym")
+minigame_page = ExtResource("4_btl6j")
+
+[node name="Label" type="Label" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=561807731]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "game 1"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=2043236854]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer2" unique_id=1403179761]
+layout_mode = 2
+texture = ExtResource("1_5mpow")
+
+[node name="Label" type="Label" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer2" unique_id=1652403430]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "game 2"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer" unique_id=2120608475]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer3" unique_id=528226649]
+layout_mode = 2
+texture = ExtResource("1_5mpow")
+
+[node name="Label" type="Label" parent="HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer3" unique_id=697574501]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "game 3"
+horizontal_alignment = 1

@@ -1,0 +1,131 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://c37dch8mnoyvu" path="res://Game Scenes/Dodge The Coughers Updated/player.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bygvd61uvvq4k" path="res://Game Scenes/Dodge The Coughers Updated/art/player_up_1.png" id="2_player_up_1"]
+[ext_resource type="Texture2D" uid="uid://c7c0ostj31otf" path="res://Game Scenes/Dodge The Coughers Updated/art/player_up_2.png" id="3_player_up_2"]
+[ext_resource type="Texture2D" uid="uid://pv2hmtpgdja3" path="res://Game Scenes/Dodge The Coughers Updated/art/player_down_1.png" id="4_player_down_1"]
+[ext_resource type="Texture2D" uid="uid://d0fgw0cmdgqh3" path="res://Game Scenes/Dodge The Coughers Updated/art/player_down_2.png" id="5_player_down_2"]
+[ext_resource type="Texture2D" uid="uid://bv7l0pwu3w67j" path="res://Game Scenes/Dodge The Coughers Updated/art/player_left_1.png" id="6_player_left_1"]
+[ext_resource type="Texture2D" uid="uid://0th4ptlqny3f" path="res://Game Scenes/Dodge The Coughers Updated/art/player_left_2.png" id="7_player_left_2"]
+[ext_resource type="Texture2D" uid="uid://crajns7bsc7q" path="res://Game Scenes/Dodge The Coughers Updated/art/player_right_1.png" id="8_player_right_1"]
+[ext_resource type="Texture2D" uid="uid://b2cf68gt60j2d" path="res://Game Scenes/Dodge The Coughers Updated/art/player_right_2.png" id="9_player_right_2"]
+[ext_resource type="Texture2D" uid="uid://c1js87ukcgell" path="res://Game Scenes/Dodge The Coughers Updated/art/player_idle.png" id="10_player_idle"]
+[ext_resource type="Texture2D" uid="uid://bri8p4hq4xdja" path="res://Game Scenes/Dodge The Coughers Updated/art/player_victory.png" id="11_player_victory"]
+[ext_resource type="Texture2D" uid="uid://nc8yeg6u8ql8" path="res://Game Scenes/Dodge The Coughers Updated/art/player_hit_disgust.png" id="12_player_hit_disgust"]
+[ext_resource type="Texture2D" uid="uid://3k4i7bmqbph6" path="res://Game Scenes/Dodge The Coughers Updated/art/player_hit_hands.png" id="13_player_hit_hands"]
+[ext_resource type="Texture2D" uid="uid://b2bg3evsqxrxe" path="res://Game Scenes/Dodge The Coughers Updated/art/player_hit_fall.png" id="14_player_hit_fall"]
+[ext_resource type="Texture2D" uid="uid://bkq8eobytrsnr" path="res://Game Scenes/Dodge The Coughers Updated/art/player_hit_fallaway.png" id="15_player_hit_fallaway"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_main"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_player_up_1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_player_up_2")
+}],
+"loop": true,
+"name": &"up",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_player_down_1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_player_down_2")
+}],
+"loop": true,
+"name": &"down",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_player_left_1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_player_left_2")
+}],
+"loop": true,
+"name": &"left",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_player_right_1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_player_right_2")
+}],
+"loop": true,
+"name": &"right",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_player_idle")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_player_victory")
+}],
+"loop": true,
+"name": &"victory",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_player_hit_disgust")
+}],
+"loop": false,
+"name": &"hit_disgust",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_player_hit_hands")
+}],
+"loop": false,
+"name": &"hit_hands",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_player_hit_fall")
+}],
+"loop": false,
+"name": &"hit_fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_player_hit_fallaway")
+}],
+"loop": false,
+"name": &"hit_fallaway",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_player"]
+radius = 16.0
+height = 100.0
+
+[node name="Player" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_main")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_player")
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
