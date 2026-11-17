@@ -18,9 +18,6 @@ stream_0 = ExtResource("7_kek77")
 script = ExtResource("1_main")
 mob_scene = ExtResource("2_mob")
 
-[node name="SubViewport" type="SubViewport" parent="." unique_id=1132364519]
-size = Vector2i(480, 720)
-
 [node name="Background" type="Node2D" parent="." unique_id=19019080]
 texture_filter = 1
 script = ExtResource("5_bg")
