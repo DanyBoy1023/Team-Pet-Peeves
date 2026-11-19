@@ -30,7 +30,7 @@ func spawn_new_cat_sprite():
 	var tween: Tween = create_tween()
 	var duration = randf_range(10, 15)
 	tween.tween_property(new_cat_sprite, "global_position", end_position, duration)
-	
+	tween.tween_callback(new_cat_sprite.queue_free)
 
 func get_random_right_point() -> Vector2:
 	var pos = right_top.global_position
