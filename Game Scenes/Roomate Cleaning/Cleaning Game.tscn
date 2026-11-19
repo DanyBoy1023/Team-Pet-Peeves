@@ -232,6 +232,8 @@ offset_left = 1.0
 offset_top = 53.0
 offset_right = -547.0
 offset_bottom = -323.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 93
@@ -257,6 +259,8 @@ offset_left = 125.0
 offset_top = 200.0
 offset_right = -125.0
 offset_bottom = -201.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 13
 theme_override_font_sizes/font_size = 70
@@ -371,13 +375,13 @@ texture = ExtResource("5_ypten")
 libraries/ = SubResource("AnimationLibrary_5an3y")
 autoplay = &"RESET"
 
+[connection signal="pressed" from="GUI/Control/Start Menu/Button" to="GUI/Control/Start Menu" method="hide"]
 [connection signal="pressed" from="GUI/Control/Start Menu/Button" to="Dish Clean Controller" method="grab_dish"]
 [connection signal="pressed" from="GUI/Control/Start Menu/Button" to="Roomate Controller/Timer" method="start"]
-[connection signal="pressed" from="GUI/Control/Start Menu/Button" to="GUI/Control/Start Menu" method="hide"]
 [connection signal="all_dishes_clean" from="Dish Clean Controller" to="." method="_on_dish_clean_controller_all_dishes_clean"]
+[connection signal="all_dishes_clean" from="Dish Clean Controller" to="GUI/Control/Win Text" method="show"]
 [connection signal="all_dishes_clean" from="Dish Clean Controller" to="Sponge Holding Spot/Sponge" method="_on_dish_clean_controller_all_dishes_clean"]
 [connection signal="all_dishes_clean" from="Dish Clean Controller" to="Roomate Controller" method="_on_dish_clean_controller_all_dishes_clean"]
-[connection signal="all_dishes_clean" from="Dish Clean Controller" to="GUI/Control/Win Text" method="show"]
 [connection signal="all_dishes_clean" from="Dish Clean Controller" to="Roomate Controller/AnimatedSprite2D" method="play" binds= ["end"]]
 [connection signal="all_dishes_clean" from="Dish Clean Controller" to="You/AnimationPlayer" method="play" binds= ["get out of here"]]
 [connection signal="mouse_entered" from="Sponge Holding Spot/Sponge" to="Sponge Holding Spot/Sponge" method="_on_mouse_entered"]

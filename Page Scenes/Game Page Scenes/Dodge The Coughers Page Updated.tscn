@@ -1,0 +1,303 @@
+[gd_scene format=3 uid="uid://bkbfhx8xbvnp8"]
+
+[ext_resource type="PackedScene" uid="uid://4w5fmmoest0e" path="res://Game Scenes/Dodge The Coughers Updated/main.tscn" id="1_tc8yw"]
+[ext_resource type="Texture2D" uid="uid://cyxbwkoropf1n" path="res://Website Art/Star 2.png" id="2_xxuqa"]
+[ext_resource type="FontFile" uid="uid://0bap6swda4l5" path="res://Fonts/chiller.ttf" id="3_7uya8"]
+[ext_resource type="Texture2D" uid="uid://bu43482w1ltbm" path="res://Website Art/Star 4.png" id="4_4vgy3"]
+[ext_resource type="Texture2D" uid="uid://cyccbsc1xwu22" path="res://Website Art/Star 5.png" id="5_3sash"]
+[ext_resource type="Texture2D" uid="uid://e2w4r6h8e1tx" path="res://Website Art/Star 3.png" id="6_qdi2s"]
+[ext_resource type="Texture2D" uid="uid://j1ujbbr1sgbe" path="res://Game Scenes/Roomate Cleaning/Art/sponge.png" id="7_tc8yw"]
+[ext_resource type="Texture2D" uid="uid://cyc84ikibrfyk" path="res://Page Scenes/Cat Page/archie.jpg" id="8_fuxn6"]
+[ext_resource type="Script" uid="uid://cm1ai7eixmvg7" path="res://Scripts/open_page_button.gd" id="8_tc8yw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu825"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uu825"]
+load_path = "res://.godot/imported/GamePageChecker.png-19cb659f3140e41f4df48d800dbb5fec.ctex"
+
+[node name="Page Holder" type="Control" unique_id=478290195]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -200.0
+offset_bottom = -179.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=722221111]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1492354265]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 0
+
+[node name="Game Screen" type="SubViewportContainer" parent="HBoxContainer/VBoxContainer" unique_id=1534743409]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 6.1
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/VBoxContainer/Game Screen" unique_id=1035108150]
+handle_input_locally = false
+size = Vector2i(330, 226)
+size_2d_override = Vector2i(478, 648)
+size_2d_override_stretch = true
+render_target_update_mode = 4
+
+[node name="Main" parent="HBoxContainer/VBoxContainer/Game Screen/SubViewport" unique_id=1916131246 instance=ExtResource("1_tc8yw")]
+
+[node name="Website bg" type="ColorRect" parent="HBoxContainer/VBoxContainer" unique_id=1437877284]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.9254902, 0, 1, 1)
+
+[node name="Label" type="CenterContainer" parent="HBoxContainer/VBoxContainer/Website bg" unique_id=967659995]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Website bg/Label" unique_id=2044089148]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_uu825")
+text = "Instructions"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/Website bg" unique_id=878459820]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/Website bg/MarginContainer" unique_id=1293234773]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/Website bg/MarginContainer/HBoxContainer" unique_id=1482601131]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_xxuqa")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer/Website bg/MarginContainer/HBoxContainer" unique_id=340916694]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+mouse_filter = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/VBoxContainer/Website bg/MarginContainer/HBoxContainer" unique_id=1541190215]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_xxuqa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Website bg2" type="TextureRect" parent="HBoxContainer/VBoxContainer" unique_id=2044008984]
+layout_mode = 2
+size_flags_vertical = 3
+texture = SubResource("CompressedTexture2D_uu825")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer" unique_id=503956601]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.64039147, 0.79209626, 0, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ColorRect" unique_id=1693179353]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/ColorRect/MarginContainer" unique_id=1222568952]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/ColorRect" unique_id=1393292408]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="HBoxContainer/ColorRect/VBoxContainer2" unique_id=39361687]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ColorRect/VBoxContainer2/Control" unique_id=312639995]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="Label" type="Label" parent="HBoxContainer/ColorRect/VBoxContainer2/Control/MarginContainer" unique_id=2086706658]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6392157, 0.7921569, 0, 1)
+theme_override_fonts/font = ExtResource("3_7uya8")
+text = "Dodge the Coughers"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ColorRect/VBoxContainer2/Control" unique_id=1993931838]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -88.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4vgy3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/ColorRect/VBoxContainer2/Control" unique_id=2135406725]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 73.0
+offset_top = 30.0
+offset_right = -9.2105255
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4vgy3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="HBoxContainer/ColorRect/VBoxContainer2/Control" unique_id=1372774164]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 30.0
+offset_right = -77.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_3sash")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="HBoxContainer/ColorRect/VBoxContainer2/Control" unique_id=164796199]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 72.0
+offset_top = 26.0
+offset_right = -28.0
+offset_bottom = -22.230766
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_qdi2s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control2" type="Control" parent="HBoxContainer/ColorRect/VBoxContainer2" unique_id=2113596665]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2" unique_id=1148280644]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer" unique_id=1317834801]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer" unique_id=1588202049]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer/MarginContainer" unique_id=5465121]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer" unique_id=521308979]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer/MarginContainer2" unique_id=285228932]
+layout_mode = 2
+texture_normal = ExtResource("7_tc8yw")
+texture_pressed = ExtResource("7_tc8yw")
+texture_hover = ExtResource("7_tc8yw")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_tc8yw")
+page = "res://Page Scenes/Game Page Scenes/Infinite Dishes Window.tscn"
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer" unique_id=1843092834]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Cat Page" type="TextureButton" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer/MarginContainer3" unique_id=1164770647]
+layout_mode = 2
+texture_normal = ExtResource("8_fuxn6")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_tc8yw")
+page = null

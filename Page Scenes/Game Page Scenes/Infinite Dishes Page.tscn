@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bu43482w1ltbm" path="res://Website Art/Star 4.png" id="4_ad3a6"]
 [ext_resource type="Texture2D" uid="uid://cyccbsc1xwu22" path="res://Website Art/Star 5.png" id="5_6jgca"]
 [ext_resource type="Texture2D" uid="uid://e2w4r6h8e1tx" path="res://Website Art/Star 3.png" id="6_bgcq7"]
-[ext_resource type="Script" uid="uid://c08rujrx7fu6l" path="res://Page Scenes/Cat Page/cat_page_button.gd" id="7_0bdj6"]
+[ext_resource type="Texture2D" uid="uid://cyc84ikibrfyk" path="res://Page Scenes/Cat Page/archie.jpg" id="7_2ml4b"]
+[ext_resource type="Texture2D" uid="uid://bho05pu7jnatn" path="res://Game Scenes/Dodge The Coughers Updated/icon.png" id="7_nvolv"]
+[ext_resource type="Script" uid="uid://cm1ai7eixmvg7" path="res://Scripts/open_page_button.gd" id="8_nvolv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu825"]
 content_margin_left = 4.0
@@ -276,6 +278,13 @@ theme_override_constants/margin_bottom = 10
 
 [node name="TextureButton2" type="TextureButton" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer/MarginContainer2" unique_id=285228932]
 layout_mode = 2
+texture_normal = ExtResource("7_nvolv")
+texture_pressed = ExtResource("7_nvolv")
+texture_hover = ExtResource("7_nvolv")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_nvolv")
+page = "res://Page Scenes/Game Page Scenes/Dodge The Coughers Window.tscn"
 
 [node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer" unique_id=1843092834]
 layout_mode = 2
@@ -287,4 +296,7 @@ theme_override_constants/margin_bottom = 10
 
 [node name="Cat Page" type="TextureButton" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer/MarginContainer3" unique_id=1164770647]
 layout_mode = 2
-script = ExtResource("7_0bdj6")
+texture_normal = ExtResource("7_2ml4b")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_nvolv")

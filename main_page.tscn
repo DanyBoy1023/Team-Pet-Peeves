@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c31mgprqx416j" path="res://icon.svg" id="1_5mpow"]
 [ext_resource type="Texture2D" uid="uid://b4xlql0oioey7" path="res://Game Scenes/Dodge The Coughers/icon.png" id="2_75dro"]
-[ext_resource type="Script" uid="uid://cryx8m3u4selk" path="res://Scripts/minigame_button.gd" id="3_pbtym"]
+[ext_resource type="Script" uid="uid://cryx8m3u4selk" path="res://Scripts/page_open_button.gd" id="3_pbtym"]
 [ext_resource type="PackedScene" uid="uid://chbhtvwo00ivv" path="res://Page Scenes/Game Page Scenes/Dodge The Coughers Window.tscn" id="4_btl6j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhqqe"]
