@@ -63,13 +63,13 @@ grow_vertical = 2
 [node name="MarginContainer" parent="Window" unique_id=1910592968 instance=ExtResource("3_sv2du")]
 layout_mode = 1
 
-[node name="ColorRect2" parent="Window/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1910592968, 326634183) index="2" unique_id=517660165]
+[node name="ColorRect2" parent="Window/MarginContainer/VBoxContainer" parent_id_path=PackedInt32Array(1910592968, 326634183) index="2" unique_id=362283413]
 custom_minimum_size = Vector2(0, 20)
 
-[node name="Back Page Button" parent="Window/MarginContainer/VBoxContainer/ColorRect2/Tabs3" parent_id_path=PackedInt32Array(1910592968, 1552679965) index="0" unique_id=624004011]
+[node name="Back Page Button" parent="Window/MarginContainer/VBoxContainer/ColorRect2/MarginContainer/Tabs3" parent_id_path=PackedInt32Array(1910592968, 1552679965) index="0" unique_id=1787904824]
 custom_maximum_size = Vector2(-1, 20)
 
-[node name="Forward Page Button" parent="Window/MarginContainer/VBoxContainer/ColorRect2/Tabs3" parent_id_path=PackedInt32Array(1910592968, 1552679965) index="1" unique_id=75699495]
+[node name="Forward Page Button" parent="Window/MarginContainer/VBoxContainer/ColorRect2/MarginContainer/Tabs3" parent_id_path=PackedInt32Array(1910592968, 1552679965) index="1" unique_id=1317709090]
 custom_maximum_size = Vector2(-1, 20)
 
 [node name="Main Page" type="Control" parent="Window/MarginContainer/VBoxContainer/Page Holder" parent_id_path=PackedInt32Array(1910592968, 1493986912) index="0" unique_id=540355734]

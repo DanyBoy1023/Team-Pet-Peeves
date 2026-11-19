@@ -1,0 +1,385 @@
+[gd_scene format=3 uid="uid://dlru81ebawgku"]
+
+[ext_resource type="Texture2D" uid="uid://dqwy6h1l2ufwt" path="res://Game Scenes/Roomate Cleaning/Art/KitchenBG.png" id="1_310jr"]
+[ext_resource type="Script" uid="uid://by223c2xc1xgo" path="res://Game Scenes/Roomate Cleaning/Scripts/dish_spawn_controller.gd" id="1_jc43v"]
+[ext_resource type="Script" uid="uid://bmvq2bja4kt0y" path="res://Game Scenes/Roomate Cleaning/Scripts/washing_game_controller.gd" id="1_ohp6v"]
+[ext_resource type="Script" uid="uid://rf3ht6ud5obu" path="res://Game Scenes/Roomate Cleaning/Scripts/rommate_gui.gd" id="2_fyrlh"]
+[ext_resource type="Script" uid="uid://dhghevcpud6sf" path="res://Game Scenes/Roomate Cleaning/Scripts/sponge.gd" id="3_310jr"]
+[ext_resource type="Script" uid="uid://bacqy45h4fkh0" path="res://Game Scenes/Roomate Cleaning/Scripts/dish_stack.gd" id="3_mw57d"]
+[ext_resource type="Script" uid="uid://ygn0awj15apt" path="res://Game Scenes/Roomate Cleaning/Scripts/roomate_controller.gd" id="5_jc43v"]
+[ext_resource type="Texture2D" uid="uid://cnrqhkg8ybiut" path="res://Game Scenes/Roomate Cleaning/Art/IdleK.png" id="5_ypten"]
+[ext_resource type="Texture2D" uid="uid://chwx6i6lqitga" path="res://Game Scenes/Roomate Cleaning/Art/roomate give.png" id="6_ls403"]
+[ext_resource type="Texture2D" uid="uid://j1ujbbr1sgbe" path="res://Game Scenes/Roomate Cleaning/Art/sponge.png" id="6_otq6u"]
+[ext_resource type="Texture2D" uid="uid://cjayqqdtgmxw4" path="res://Game Scenes/Roomate Cleaning/Art/roomate walk 1.png" id="7_jc43v"]
+[ext_resource type="Texture2D" uid="uid://di276yxxjalet" path="res://Game Scenes/Roomate Cleaning/Art/roomate walk 2.png" id="8_mw57d"]
+[ext_resource type="Texture2D" uid="uid://choxhdh8x4i1y" path="res://Game Scenes/Roomate Cleaning/Art/roomate end.png" id="9_5an3y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(75, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ypten"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_5an3y")
+}],
+"loop": 1,
+"name": &"end",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ls403")
+}],
+"loop": 1,
+"name": &"give",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_jc43v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mw57d")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_jc43v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(738.125, 191.6192)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ls403"]
+resource_name = "add new dish"
+length = 1.7
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.2, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(738.125, 191.6192), Vector2(461.00003, 191.6192), Vector2(461.00003, 191.6192), Vector2(738.125, 191.6192)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"walk", &"give", &"walk"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 1.2, 1.3000001, 1.4, 1.5, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0, 0, 1, 0, 1, 0]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"roomate_add_new_dish"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jc43v"]
+_data = {
+&"RESET": SubResource("Animation_jc43v"),
+&"add new dish": SubResource("Animation_ls403")
+}
+
+[sub_resource type="Animation" id="Animation_5an3y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(353, 267)]
+}
+
+[sub_resource type="Animation" id="Animation_fyrlh"]
+resource_name = "get out of here"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(353, 267), Vector2(860, 267)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5an3y"]
+_data = {
+&"RESET": SubResource("Animation_5an3y"),
+&"get out of here": SubResource("Animation_fyrlh")
+}
+
+[node name="CleaningGame" type="Node2D" unique_id=1280043204]
+script = ExtResource("1_ohp6v")
+
+[node name="GUI" type="CanvasLayer" parent="." unique_id=1890120120]
+script = ExtResource("2_fyrlh")
+
+[node name="Control" type="Control" parent="GUI" unique_id=345628931]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Clean Dishes Counter" type="Label" parent="GUI/Control" unique_id=1223594034]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 53.0
+offset_right = -547.0
+offset_bottom = -323.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 93
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Win Text" type="Control" parent="GUI/Control" unique_id=188499222]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="GUI/Control/Win Text" unique_id=184804522]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 125.0
+offset_top = 200.0
+offset_right = -125.0
+offset_bottom = -201.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 70
+text = "You are free!!"
+
+[node name="Start Menu" type="Control" parent="GUI/Control" unique_id=1752582559]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="GUI/Control/Start Menu" unique_id=1231161812]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 125.0
+offset_top = 99.0
+offset_right = -125.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 70
+text = "Infinite Dirty Dishes"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="GUI/Control/Start Menu" unique_id=1207334013]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 180.0
+offset_top = 327.0
+offset_right = -178.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 71
+text = "Play"
+
+[node name="KitchenBg" type="Sprite2D" parent="." unique_id=735793281]
+position = Vector2(315.00003, 231.00005)
+scale = Vector2(0.16078432, 0.16666666)
+texture = ExtResource("1_310jr")
+
+[node name="hold position" type="Marker2D" parent="." unique_id=1842263450]
+position = Vector2(152, 371)
+
+[node name="end position" type="Marker2D" parent="." unique_id=627202645]
+position = Vector2(-103, 448)
+
+[node name="Dish Clean Controller" type="Node2D" parent="." unique_id=107172493]
+unique_name_in_owner = true
+z_index = 3
+position = Vector2(475, 132)
+script = ExtResource("1_jc43v")
+
+[node name="Dish Stack" type="Node2D" parent="." unique_id=757351204]
+unique_name_in_owner = true
+z_index = 2
+position = Vector2(243, 260)
+script = ExtResource("3_mw57d")
+dish_scale = Vector2(0.5, 0.5)
+
+[node name="Sponge Holding Spot" type="Node2D" parent="." unique_id=123945994]
+z_index = 5
+position = Vector2(284, 438)
+
+[node name="Sponge" type="Area2D" parent="Sponge Holding Spot" unique_id=418386868]
+script = ExtResource("3_310jr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sponge Holding Spot/Sponge" unique_id=1845668577]
+position = Vector2(2.861023e-06, 6.67572e-06)
+scale = Vector2(0.06999999, 0.06688888)
+texture = ExtResource("6_otq6u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sponge Holding Spot/Sponge" unique_id=1849318549]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Roomate Controller" type="Node2D" parent="." unique_id=2115969454]
+unique_name_in_owner = true
+script = ExtResource("5_jc43v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Roomate Controller" unique_id=770726997]
+position = Vector2(738.125, 191.6192)
+scale = Vector2(0.12101238, 0.12101239)
+sprite_frames = SubResource("SpriteFrames_ypten")
+animation = &"walk"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Roomate Controller" unique_id=988869294]
+libraries/ = SubResource("AnimationLibrary_jc43v")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Roomate Controller" unique_id=129709315]
+
+[node name="Timer" type="Timer" parent="Roomate Controller" unique_id=1094448430]
+wait_time = 8.0
+
+[node name="You" type="Sprite2D" parent="." unique_id=448844907]
+z_index = 4
+position = Vector2(353, 267)
+scale = Vector2(0.14274089, 0.14274088)
+texture = ExtResource("5_ypten")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="You" unique_id=339273985]
+libraries/ = SubResource("AnimationLibrary_5an3y")
+autoplay = &"RESET"
+
+[connection signal="pressed" from="GUI/Control/Start Menu/Button" to="Dish Clean Controller" method="grab_dish"]
+[connection signal="pressed" from="GUI/Control/Start Menu/Button" to="Roomate Controller/Timer" method="start"]
+[connection signal="pressed" from="GUI/Control/Start Menu/Button" to="GUI/Control/Start Menu" method="hide"]
+[connection signal="all_dishes_clean" from="Dish Clean Controller" to="." method="_on_dish_clean_controller_all_dishes_clean"]
+[connection signal="all_dishes_clean" from="Dish Clean Controller" to="Sponge Holding Spot/Sponge" method="_on_dish_clean_controller_all_dishes_clean"]
+[connection signal="all_dishes_clean" from="Dish Clean Controller" to="Roomate Controller" method="_on_dish_clean_controller_all_dishes_clean"]
+[connection signal="all_dishes_clean" from="Dish Clean Controller" to="GUI/Control/Win Text" method="show"]
+[connection signal="all_dishes_clean" from="Dish Clean Controller" to="Roomate Controller/AnimatedSprite2D" method="play" binds= ["end"]]
+[connection signal="all_dishes_clean" from="Dish Clean Controller" to="You/AnimationPlayer" method="play" binds= ["get out of here"]]
+[connection signal="mouse_entered" from="Sponge Holding Spot/Sponge" to="Sponge Holding Spot/Sponge" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Sponge Holding Spot/Sponge" to="Sponge Holding Spot/Sponge" method="_on_mouse_exited"]
+[connection signal="timeout" from="Roomate Controller/Timer" to="Roomate Controller" method="_on_timer_timeout"]

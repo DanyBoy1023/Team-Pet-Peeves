@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://fviamndm34by" path="res://Game Scenes/Dodge The Coughers Updated/main.gd" id="1_main"]
 [ext_resource type="PackedScene" path="res://Game Scenes/Dodge The Coughers Updated/mob.tscn" id="2_mob"]
 [ext_resource type="PackedScene" path="res://Game Scenes/Dodge The Coughers Updated/player.tscn" id="3_player"]
-[ext_resource type="PackedScene" path="res://Game Scenes/Dodge The Coughers Updated/hud.tscn" id="4_hud"]
+[ext_resource type="PackedScene" uid="uid://dwxovn0c0xa2q" path="res://Game Scenes/Dodge The Coughers Updated/hud.tscn" id="4_hud"]
 [ext_resource type="Script" uid="uid://b758kfnpa0b24" path="res://Game Scenes/Dodge The Coughers Updated/background.gd" id="5_bg"]
 [ext_resource type="Texture2D" uid="uid://u17jr37jww6y" path="res://Game Scenes/Dodge The Coughers Updated/art/street.jpg" id="6_street"]
 [ext_resource type="AudioStream" uid="uid://b46fruhtt1q2v" path="res://Game Scenes/Dodge The Coughers Updated/music.ogg" id="7_music"]

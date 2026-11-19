@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://c2efyuvp7por0"]
+
+[ext_resource type="Script" uid="uid://etggp6wgjxeq" path="res://Game Scenes/Roomate Cleaning/Scripts/dish.gd" id="1_84dg5"]
+[ext_resource type="PackedScene" uid="uid://dof0vroata0je" path="res://Game Scenes/Roomate Cleaning/bubble.tscn" id="2_f0gw7"]
+[ext_resource type="Texture2D" uid="uid://b0fy4fsv4j7bf" path="res://Game Scenes/Roomate Cleaning/Art/spatula.png" id="3_84dg5"]
+[ext_resource type="Shader" uid="uid://88gvlpefonhd" path="res://Shader/dirt_shader.gdshader" id="4_7u86m"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ohp6v"]
+noise_type = 4
+frequency = 0.0303
+fractal_gain = 0.775
+fractal_weighted_strength = 0.43
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ceo5g"]
+width = 1000
+height = 1000
+noise = SubResource("FastNoiseLite_ohp6v")
+invert = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ceo5g"]
+resource_local_to_scene = true
+shader = ExtResource("4_7u86m")
+shader_parameter/dirt_mask = SubResource("NoiseTexture2D_ceo5g")
+shader_parameter/dirt_color = Color(0.22, 0.15, 0.08, 1)
+shader_parameter/dirt_amount = 0.5
+shader_parameter/dirt_scale = 1.0
+shader_parameter/alpha = 1.0
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_g4v7s"]
+vertices = PackedVector2Array(31.492188, -115.32031, 39.789063, -108.71875, -33.390625, -17.179688, -40.703125, -24.8125, -31.203125, 0.7421875, -70.13281, 47.929688, -78.0625, 45.390625, -102.953125, 25.539063, -103.60156, 19.710938, -69.71094, -21.476563)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8, 9, 3, 2)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-108.81134, 18.168587, -72.2856, -26.225899, -43.319458, -29.536901, 30.689045, -122.336365, 46.82762, -109.508804, -28.170101, -15.69866, -25.977072, 2.278843, -68.42735, 53.7373, -80.46959, 49.86629, -107.704094, 28.157276)])
+agent_radius = 5.0
+
+[node name="Plate" type="Node2D" unique_id=2095467495]
+script = ExtResource("1_84dg5")
+soap_bubble = ExtResource("2_f0gw7")
+
+[node name="base sprite" type="Sprite2D" parent="." unique_id=1294769918]
+position = Vector2(0, -1)
+rotation = -2.4339206
+scale = Vector2(0.28648648, 0.28648648)
+texture = ExtResource("3_84dg5")
+
+[node name="grime sprite" type="Sprite2D" parent="." unique_id=2073073588]
+material = SubResource("ShaderMaterial_ceo5g")
+position = Vector2(0, -1)
+rotation = -2.4339206
+scale = Vector2(0.28648648, 0.28648648)
+texture = ExtResource("3_84dg5")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1112187641]
+position = Vector2(24.00003, 38.00003)
+rotation = 0.01073041
+navigation_polygon = SubResource("NavigationPolygon_g4v7s")

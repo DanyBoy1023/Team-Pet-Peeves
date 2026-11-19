@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dof0vroata0je"]
+
+[ext_resource type="Script" uid="uid://48gw5axnpdrs" path="res://Game Scenes/Roomate Cleaning/Scripts/soap.gd" id="1_5uvcv"]
+[ext_resource type="Texture2D" uid="uid://d4h4qwoyemqif" path="res://Game Scenes/Roomate Cleaning/Art/cartoon bubble.png" id="2_qbyk7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ls403"]
+atlas = ExtResource("2_qbyk7")
+region = Rect2(631.5575, 380.7865, 97.807495, 95.62189)
+
+[node name="Bubble" type="Area2D" unique_id=1280456455]
+script = ExtResource("1_5uvcv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=119043958]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=558364720]
+position = Vector2(-6.4373016e-06, -7.688999e-06)
+scale = Vector2(0.21052635, 0.2105262)
+texture = SubResource("AtlasTexture_ls403")

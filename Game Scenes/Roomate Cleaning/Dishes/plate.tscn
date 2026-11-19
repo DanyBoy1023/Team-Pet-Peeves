@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://djbbkjqs8g075"]
+
+[ext_resource type="Shader" uid="uid://88gvlpefonhd" path="res://Shader/dirt_shader.gdshader" id="1_ceo5g"]
+[ext_resource type="Script" uid="uid://etggp6wgjxeq" path="res://Game Scenes/Roomate Cleaning/Scripts/dish.gd" id="2_omjb5"]
+[ext_resource type="PackedScene" uid="uid://dof0vroata0je" path="res://Game Scenes/Roomate Cleaning/bubble.tscn" id="3_n8v7i"]
+[ext_resource type="Texture2D" uid="uid://dq3ivcwnvnspw" path="res://Game Scenes/Roomate Cleaning/Art/white plate.png" id="4_omjb5"]
+[ext_resource type="Texture2D" uid="uid://b68xyqmsygmqb" path="res://Game Scenes/Roomate Cleaning/Art/white plate_no_outline.png" id="5_yhvdt"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ohp6v"]
+noise_type = 4
+frequency = 0.0303
+fractal_gain = 0.775
+fractal_weighted_strength = 0.43
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ceo5g"]
+width = 1000
+height = 1000
+noise = SubResource("FastNoiseLite_ohp6v")
+invert = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ceo5g"]
+resource_local_to_scene = true
+shader = ExtResource("1_ceo5g")
+shader_parameter/dirt_mask = SubResource("NoiseTexture2D_ceo5g")
+shader_parameter/dirt_color = Color(0.22, 0.15, 0.08, 1)
+shader_parameter/dirt_amount = 0.5
+shader_parameter/dirt_scale = 1.0
+shader_parameter/alpha = 1.0
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_g4v7s"]
+vertices = PackedVector2Array(11.6015625, -96.25, 31.5, -76.35156, 43.632813, -46.898438, 37.5, -13.6328125, 25.71875, 5.7109375, -3.0390625, 23.148438, -34.273438, 24.890625, -63.632813, 12.796875, -86.140625, -17.5, -87.86719, -55.5625, -69.5625, -87.828125, -47.523438, -101.390625, -16.921875, -105.75781)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-77, -95, -51, -111, -16, -116, 17, -105, 40, -82, 54, -48, 47, -10, 33, 13, 0, 33, -36, 35, -70, 21, -96, -14, -98, -58)])
+
+[node name="Plate" type="Node2D" unique_id=2095467495]
+script = ExtResource("2_omjb5")
+soap_bubble = ExtResource("3_n8v7i")
+
+[node name="base sprite" type="Sprite2D" parent="." unique_id=1294769918]
+position = Vector2(0, -1)
+scale = Vector2(0.28648648, 0.28648648)
+texture = ExtResource("4_omjb5")
+
+[node name="grime sprite" type="Sprite2D" parent="." unique_id=2073073588]
+material = SubResource("ShaderMaterial_ceo5g")
+position = Vector2(0, -1)
+scale = Vector2(0.28648648, 0.28648648)
+texture = ExtResource("5_yhvdt")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1112187641]
+position = Vector2(24.00003, 38.00003)
+navigation_polygon = SubResource("NavigationPolygon_g4v7s")

@@ -1,4 +1,4 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://dwxovn0c0xa2q"]
 
 [ext_resource type="Script" uid="uid://daxil1h1nqeh2" path="res://Game Scenes/Dodge The Coughers Updated/hud.gd" id="1_hud"]
 
@@ -8,10 +8,10 @@ action = &"start_game"
 [sub_resource type="Shortcut" id="Shortcut_start"]
 events = [SubResource("InputEventAction_start")]
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" unique_id=1771521148]
 script = ExtResource("1_hud")
 
-[node name="ScoreLabel" type="Label" parent="."]
+[node name="ScoreLabel" type="Label" parent="." unique_id=2045697717]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -25,7 +25,7 @@ theme_override_font_sizes/font_size = 64
 text = "0"
 horizontal_alignment = 1
 
-[node name="Message" type="Label" parent="."]
+[node name="Message" type="Label" parent="." unique_id=1610186593]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -40,7 +40,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="StartButton" type="Button" parent="."]
+[node name="StartButton" type="Button" parent="." unique_id=1973020172]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -56,7 +56,7 @@ theme_override_font_sizes/font_size = 48
 shortcut = SubResource("Shortcut_start")
 text = "Start"
 
-[node name="MessageTimer" type="Timer" parent="."]
+[node name="MessageTimer" type="Timer" parent="." unique_id=1783143658]
 wait_time = 2.0
 one_shot = true
 

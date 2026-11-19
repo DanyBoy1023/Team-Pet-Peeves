@@ -10,7 +10,7 @@ var load_new = false
 
 var loading_bar_anim_player: AnimationPlayer
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("back page"):
 		go_back_a_page()
 	if Input.is_action_just_pressed("forward page"):
@@ -26,6 +26,7 @@ func load_new_page():
 	page_list.append(next_page)
 	current_page_index += 1
 	get_tree().change_scene_to_packed(next_page)
+	Mouse.connect_buttons_in_scene()
 
 func go_forward_a_page():
 	new_page_index = min(current_page_index + 1, page_list.size()-1)
@@ -34,6 +35,11 @@ func go_forward_a_page():
 func go_back_a_page():
 	new_page_index = max(current_page_index - 1, 0)
 	open_page_by_index(new_page_index)
+
+func reload_current_page():
+	var page_scene = page_list[current_page_index]
+	next_page = page_scene
+	load_bar()
 
 func load_bar():
 	connect_animation_player()
@@ -67,3 +73,4 @@ func change_to_scene(_animation_name):
 		if new_page_index != current_page_index:
 			current_page_index = new_page_index
 		get_tree().change_scene_to_packed(next_page)
+		Mouse.connect_buttons_in_scene()

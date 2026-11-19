@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bsvjr5j143cti"]
 
 [ext_resource type="Script" uid="uid://c1ojluigrph6a" path="res://Page Scenes/page button controller.gd" id="1_0aqkh"]
+[ext_resource type="Texture2D" uid="uid://erkrn5ge2prq" path="res://Website Art/reload-page-icon-vector.jpg" id="2_546dp"]
+[ext_resource type="Texture2D" uid="uid://bg0rxusj233ja" path="res://Website Art/arrow.jpg" id="2_c6hic"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_546dp"]
 content_margin_left = 0.0
@@ -243,29 +245,53 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yr65p")
 script = ExtResource("1_0aqkh")
 
-[node name="Tabs3" type="HBoxContainer" parent="VBoxContainer/ColorRect2" unique_id=1552679965]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ColorRect2" unique_id=710654826]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 1
 
-[node name="Back Page Button" type="Button" parent="VBoxContainer/ColorRect2/Tabs3" unique_id=624004011]
+[node name="Tabs3" type="HBoxContainer" parent="VBoxContainer/ColorRect2/MarginContainer" unique_id=1552679965]
 layout_mode = 2
-text = "<"
 
-[node name="Forward Page Button" type="Button" parent="VBoxContainer/ColorRect2/Tabs3" unique_id=75699495]
+[node name="Back Page Button" type="TextureButton" parent="VBoxContainer/ColorRect2/MarginContainer/Tabs3" unique_id=1787904824]
+custom_minimum_size = Vector2(16.38, 0)
 layout_mode = 2
-text = ">"
+texture_normal = ExtResource("2_c6hic")
+texture_pressed = ExtResource("2_c6hic")
+texture_hover = ExtResource("2_c6hic")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
 
-[node name="Label" type="Label" parent="VBoxContainer/ColorRect2/Tabs3" unique_id=668842130]
+[node name="Forward Page Button" type="TextureButton" parent="VBoxContainer/ColorRect2/MarginContainer/Tabs3" unique_id=1317709090]
+custom_minimum_size = Vector2(16.38, 0)
+layout_mode = 2
+texture_normal = ExtResource("2_c6hic")
+texture_pressed = ExtResource("2_c6hic")
+texture_hover = ExtResource("2_c6hic")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Reload Page Button" type="TextureButton" parent="VBoxContainer/ColorRect2/MarginContainer/Tabs3" unique_id=200159133]
+custom_minimum_size = Vector2(16.85, 0)
+layout_mode = 2
+texture_normal = ExtResource("2_546dp")
+texture_pressed = ExtResource("2_546dp")
+texture_hover = ExtResource("2_546dp")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/ColorRect2/MarginContainer/Tabs3" unique_id=668842130]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Adress:"
 horizontal_alignment = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ColorRect2/Tabs3" unique_id=912412424]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ColorRect2/MarginContainer/Tabs3" unique_id=912412424]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_left = 1
@@ -273,12 +299,12 @@ theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 1
 theme_override_constants/margin_bottom = 3
 
-[node name="Panel" type="Panel" parent="VBoxContainer/ColorRect2/Tabs3/MarginContainer" unique_id=1867607832]
+[node name="Panel" type="Panel" parent="VBoxContainer/ColorRect2/MarginContainer/Tabs3/MarginContainer" unique_id=1867607832]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_4ipr5")
 
-[node name="Label" type="Label" parent="VBoxContainer/ColorRect2/Tabs3/MarginContainer/Panel" unique_id=478278212]
+[node name="Label" type="Label" parent="VBoxContainer/ColorRect2/MarginContainer/Tabs3/MarginContainer/Panel" unique_id=478278212]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -311,5 +337,6 @@ libraries/ = SubResource("AnimationLibrary_sv2du")
 layout_mode = 2
 size_flags_vertical = 3
 
-[connection signal="pressed" from="VBoxContainer/ColorRect2/Tabs3/Back Page Button" to="VBoxContainer/ColorRect2" method="_on_back_page_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ColorRect2/Tabs3/Forward Page Button" to="VBoxContainer/ColorRect2" method="_on_forward_page_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ColorRect2/MarginContainer/Tabs3/Back Page Button" to="VBoxContainer/ColorRect2" method="_on_back_page_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ColorRect2/MarginContainer/Tabs3/Forward Page Button" to="VBoxContainer/ColorRect2" method="_on_forward_page_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ColorRect2/MarginContainer/Tabs3/Reload Page Button" to="VBoxContainer/ColorRect2" method="_on_reload_page_button_pressed"]
