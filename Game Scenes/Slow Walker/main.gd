@@ -86,7 +86,7 @@ func new_game() -> void:
 	_stuck = 0.0
 	player.reset($StartPosition.global_position)
 	player.active = true
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	hud.hide_message()
 	$Music.play()
 	for i in START_CROWD:
@@ -97,12 +97,12 @@ func new_game() -> void:
 	_state_age = 0.0
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("release_mouse"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	elif event is InputEventMouseButton and event.pressed and state != State.TITLE \
-			and Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+#func _unhandled_input(event: InputEvent) -> void:
+	#if event.is_action_pressed("release_mouse"):
+		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	#elif event is InputEventMouseButton and event.pressed and state != State.TITLE \
+			#and Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
+		#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
 func _process(delta: float) -> void:

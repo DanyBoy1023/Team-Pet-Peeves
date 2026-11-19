@@ -75,7 +75,7 @@ static func random_kind(motion: String = "") -> Dictionary:
 
 static func get_tex(frame: String) -> Texture2D:
 	if not _tex_cache.has(frame):
-		_tex_cache[frame] = load("res://art/%s.png" % frame)
+		_tex_cache[frame] = load("res://Game Scenes/Slow Walker/art/%s.png" % frame)
 	return _tex_cache[frame]
 
 

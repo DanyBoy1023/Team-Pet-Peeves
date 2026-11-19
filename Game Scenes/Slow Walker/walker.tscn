@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3]
 
-[ext_resource type="Script" path="res://walker.gd" id="1_walker"]
+[ext_resource type="Script" uid="uid://okiwk4x2vlwj" path="res://Game Scenes/Slow Walker/walker.gd" id="1_walker"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_walker"]
 radius = 0.3

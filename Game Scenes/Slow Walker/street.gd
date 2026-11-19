@@ -40,7 +40,7 @@ func _flat(color: Color) -> StandardMaterial3D:
 
 
 func _build_floor(total: float, center_z: float) -> void:
-	var tex := load("res://art/street.jpg") as Texture2D
+	var tex := load("res://Game Scenes/Slow Walker/art/street.jpg") as Texture2D
 	var mat := _unshaded(tex)
 	# One texture tile covers the street width. Repeat it along the length.
 	var tile_len := WIDTH * float(tex.get_height()) / float(tex.get_width())
@@ -55,7 +55,7 @@ func _build_floor(total: float, center_z: float) -> void:
 
 
 func _build_walls(total: float, center_z: float, front_z: float) -> void:
-	var tex := load("res://art/facade.png") as Texture2D
+	var tex := load("res://Game Scenes/Slow Walker/art/facade.png") as Texture2D
 	var aspect := float(tex.get_width()) / float(tex.get_height())
 	var side_mat := _unshaded(tex)
 	side_mat.cull_mode = BaseMaterial3D.CULL_DISABLED

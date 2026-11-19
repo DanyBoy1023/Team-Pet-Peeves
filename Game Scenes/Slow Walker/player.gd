@@ -48,17 +48,17 @@ func reset(pos: Vector3) -> void:
 	active = false
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		rotate_y(-event.relative.x * MOUSE_SENS)
-		head.rotation.x = clampf(head.rotation.x - event.relative.y * MOUSE_SENS, -1.3, 1.3)
+#func _unhandled_input(event: InputEvent) -> void:
+	#if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		#rotate_y(-event.relative.x * MOUSE_SENS)
+		#head.rotation.x = clampf(head.rotation.x - event.relative.y * MOUSE_SENS, -1.3, 1.3)
 
 
 func _physics_process(delta: float) -> void:
-	var look := Input.get_vector("look_left", "look_right", "look_up", "look_down")
-	if look != Vector2.ZERO:
-		rotate_y(-look.x * STICK_LOOK * delta)
-		head.rotation.x = clampf(head.rotation.x - look.y * STICK_LOOK * delta, -1.3, 1.3)
+	#var look := Input.get_vector("look_left", "look_right", "look_up", "look_down")
+	#if look != Vector2.ZERO:
+		#rotate_y(-look.x * STICK_LOOK * delta)
+		#head.rotation.x = clampf(head.rotation.x - look.y * STICK_LOOK * delta, -1.3, 1.3)
 
 	var input_dir := Vector2.ZERO
 	if active:

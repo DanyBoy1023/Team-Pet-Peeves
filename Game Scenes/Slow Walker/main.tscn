@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cxokwlq838ijo"]
 
-[ext_resource type="Script" uid="uid://7w8e68rkyuk3" path="res://main.gd" id="1_main"]
-[ext_resource type="Script" uid="uid://c5uku5by6i3nm" path="res://street.gd" id="2_street"]
-[ext_resource type="PackedScene" path="res://player.tscn" id="3_player"]
-[ext_resource type="PackedScene" path="res://walker.tscn" id="4_walker"]
-[ext_resource type="PackedScene" path="res://hud.tscn" id="5_hud"]
-[ext_resource type="AudioStream" uid="uid://cnaxjgbwogcyj" path="res://House In a Forest Loop.ogg" id="6_music"]
-[ext_resource type="AudioStream" uid="uid://mle8p824t1ta" path="res://bump.wav" id="7_bump"]
-[ext_resource type="AudioStream" uid="uid://bw5islrok80es" path="res://gameover.wav" id="8_gameover"]
-[ext_resource type="AudioStream" uid="uid://d0n6qsfx4wabu" path="res://finish.wav" id="9_finish"]
+[ext_resource type="Script" uid="uid://7w8e68rkyuk3" path="res://Game Scenes/Slow Walker/main.gd" id="1_main"]
+[ext_resource type="Script" uid="uid://c5uku5by6i3nm" path="res://Game Scenes/Slow Walker/street.gd" id="2_street"]
+[ext_resource type="PackedScene" uid="uid://d0jd3dt5nhq6b" path="res://Game Scenes/Slow Walker/player.tscn" id="3_player"]
+[ext_resource type="PackedScene" path="res://Game Scenes/Slow Walker/walker.tscn" id="4_walker"]
+[ext_resource type="PackedScene" path="res://Game Scenes/Slow Walker/hud.tscn" id="5_hud"]
+[ext_resource type="AudioStream" uid="uid://cnaxjgbwogcyj" path="res://Game Scenes/Slow Walker/House In a Forest Loop.ogg" id="6_music"]
+[ext_resource type="AudioStream" uid="uid://mle8p824t1ta" path="res://Game Scenes/Slow Walker/bump.wav" id="7_bump"]
+[ext_resource type="AudioStream" uid="uid://bw5islrok80es" path="res://Game Scenes/Slow Walker/gameover.wav" id="8_gameover"]
+[ext_resource type="AudioStream" uid="uid://d0n6qsfx4wabu" path="res://Game Scenes/Slow Walker/finish.wav" id="9_finish"]
 
 [sub_resource type="Environment" id="Environment_street"]
 background_mode = 1
