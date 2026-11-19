@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cnaxjgbwogcyj"
+path="res://.godot/imported/House In a Forest Loop.ogg-bf01e0d650f49a398b30e8813f2b61ac.oggvorbisstr"
+
+[deps]
+
+source_file="res://Game Scenes/Slow Walker/House In a Forest Loop.ogg"
+dest_files=["res://.godot/imported/House In a Forest Loop.ogg-bf01e0d650f49a398b30e8813f2b61ac.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

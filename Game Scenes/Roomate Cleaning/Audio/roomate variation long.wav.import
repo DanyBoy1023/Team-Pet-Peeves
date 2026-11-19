@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cihgs15iynhod"
+path="res://.godot/imported/roomate variation long.wav-40af99f6e0eca2f597a3f729154abdb9.sample"
+
+[deps]
+
+source_file="res://Game Scenes/Roomate Cleaning/Audio/roomate variation long.wav"
+dest_files=["res://.godot/imported/roomate variation long.wav-40af99f6e0eca2f597a3f729154abdb9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

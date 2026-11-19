@@ -580,8 +580,8 @@ autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Panel/VBoxContainer" unique_id=1174498410]
 layout_mode = 2
-theme_override_font_sizes/font_size = 6
-text = "Why Are Pleople So Slow?"
+theme_override_font_sizes/font_size = 5
+text = "They never walk as fast as they should or move out of the way, its actually ridiculous how slow some people can be. Plus they never move out of the way when they know they are in the way, like come on!"
 autowrap_mode = 2
 
 [node name="Panel2" type="Panel" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=990268701]
@@ -607,8 +607,8 @@ autowrap_mode = 2
 [node name="Label2" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Panel2/VBoxContainer2" unique_id=807921291]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 6
-text = "Why Are Pleople So Slow?"
+theme_override_font_sizes/font_size = 5
+text = "Everyone just needs to get off of the road and let me through. It is not that hard to drive in a straight line that curves every now and then. Just GO!"
 autowrap_mode = 2
 
 [node name="Panel3" type="Panel" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1406378162]
@@ -632,8 +632,8 @@ autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Panel3/VBoxContainer2" unique_id=495081516]
 layout_mode = 2
-theme_override_font_sizes/font_size = 6
-text = "Why Are Pleople So Slow?"
+theme_override_font_sizes/font_size = 5
+text = "People who talk on the phone or listen to music in public without headphones need to be wide off this planet, because I am about to run them over with my car. I do not want to know what happened at Lisa’s birthday."
 autowrap_mode = 2
 
 [node name="Control2" type="Control" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer" unique_id=1294476110]

@@ -4,6 +4,7 @@ extends Node2D
 @onready var dish_stack: DishStack = %"Dish Stack"
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var timer: Timer = $Timer
+@onready var roomate_bark: AudioStreamPlayer = $"Roomate Bark"
 
 var next_dish_spawn_amount := 0
 
@@ -15,6 +16,8 @@ func start_animation(speed_scale: float, amount: int = 1):
 	animation_player.play("add new dish")
 
 func roomate_add_new_dish():
+	roomate_bark.stop()
+	roomate_bark.play()
 	for i in next_dish_spawn_amount:
 		dish_stack.add_new_dish_to_stack()
 
