@@ -246,9 +246,12 @@ theme_override_constants/margin_right = 10
 
 [node name="Label" type="Label" parent="HBoxContainer/ColorRect/VBoxContainer2/Control/MarginContainer" unique_id=2086706658]
 layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 7.65)
 theme_override_colors/font_color = Color(0.6392157, 0.7921569, 0, 1)
 theme_override_fonts/font = ExtResource("3_i85bm")
-text = "Dodge the Coughers"
+theme_override_font_sizes/font_size = 27
+text = "Slow Walker"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
