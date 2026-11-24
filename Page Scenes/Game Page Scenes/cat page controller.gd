@@ -26,6 +26,7 @@ func spawn_new_cat_sprite():
 	# randomize sprite frame
 	var random_frame = randi_range(0, new_cat_sprite.sprite_frames.get_frame_count("random cat") - 1)
 	new_cat_sprite.frame = random_frame
+	new_cat_sprite.z_index = randi_range(-1, 1)
 	
 	var tween: Tween = create_tween()
 	var duration = randf_range(10, 15)

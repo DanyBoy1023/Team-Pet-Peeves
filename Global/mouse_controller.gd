@@ -17,8 +17,10 @@ func connect_buttons_in_scene():
 	for node in get_all_nodes(get_tree().current_scene):
 		if node is BaseButton:
 			var button: BaseButton = node
-			button.mouse_entered.connect(_on_interactable_mouse_entered)
-			button.mouse_exited.connect(_on_interactable_mouse_exited)
+			if not button.mouse_entered.is_connected(_on_interactable_mouse_entered):
+				button.mouse_entered.connect(_on_interactable_mouse_entered)
+			if not button.mouse_exited.is_connected(_on_interactable_mouse_exited):
+				button.mouse_exited.connect(_on_interactable_mouse_exited)
 
 func get_all_nodes(node: Node) -> Array[Node]:
 	var nodes: Array[Node] = []

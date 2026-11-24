@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://bkbfhx8xbvnp8"]
 
 [ext_resource type="PackedScene" uid="uid://4w5fmmoest0e" path="res://Game Scenes/Dodge The Coughers Updated/main.tscn" id="1_tc8yw"]
+[ext_resource type="Script" uid="uid://v2eb2m3qdxp1" path="res://Page Scenes/Game Page Scenes/intstructions_button.gd" id="2_7uya8"]
 [ext_resource type="Texture2D" uid="uid://cyxbwkoropf1n" path="res://Website Art/Star 2.png" id="2_xxuqa"]
 [ext_resource type="FontFile" uid="uid://0bap6swda4l5" path="res://Fonts/chiller.ttf" id="3_7uya8"]
 [ext_resource type="Texture2D" uid="uid://bu43482w1ltbm" path="res://Website Art/Star 4.png" id="4_4vgy3"]
 [ext_resource type="Texture2D" uid="uid://cyccbsc1xwu22" path="res://Website Art/Star 5.png" id="5_3sash"]
 [ext_resource type="Texture2D" uid="uid://e2w4r6h8e1tx" path="res://Website Art/Star 3.png" id="6_qdi2s"]
 [ext_resource type="Texture2D" uid="uid://j1ujbbr1sgbe" path="res://Game Scenes/Roomate Cleaning/Art/sponge.png" id="7_tc8yw"]
+[ext_resource type="Texture2D" uid="uid://b6g5qo3hs0x2b" path="res://Game Scenes/Slow Walker/art/slow walker icon.png" id="7_xxuqa"]
 [ext_resource type="Texture2D" uid="uid://cyc84ikibrfyk" path="res://Page Scenes/Cat Page/archie.jpg" id="8_fuxn6"]
 [ext_resource type="Script" uid="uid://cm1ai7eixmvg7" path="res://Scripts/open_page_button.gd" id="8_tc8yw"]
 
@@ -20,6 +22,19 @@ corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7uya8"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.6392157, 0.7921569, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
 corner_detail = 5
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uu825"]
@@ -87,6 +102,49 @@ theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_uu825")
 text = "Instructions"
+script = ExtResource("2_7uya8")
+
+[node name="Panel" type="Panel" parent="HBoxContainer/VBoxContainer/Website bg/Label/Button" unique_id=752233533]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.4310001
+anchor_top = -8.579
+anchor_right = 2.45
+anchor_bottom = 1.269
+offset_left = 88.20401
+offset_top = 129.63301
+offset_right = -93.8
+offset_bottom = -32.263
+theme_override_styles/panel = SubResource("StyleBoxFlat_7uya8")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/Website bg/Label/Button/Panel" unique_id=1200598093]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Website bg/Label/Button/Panel/MarginContainer" unique_id=1867325179]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer/Website bg/Label/Button/Panel/MarginContainer/VBoxContainer" unique_id=2030993989]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "WASD or arrow keys to move around"
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer/Website bg/Label/Button/Panel/MarginContainer/VBoxContainer" unique_id=59674468]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Try and dodge the sickly"
+autowrap_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/Website bg" unique_id=878459820]
 layout_mode = 1
@@ -267,6 +325,11 @@ theme_override_constants/margin_bottom = 10
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer/MarginContainer" unique_id=5465121]
 layout_mode = 2
+texture_normal = ExtResource("7_xxuqa")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_tc8yw")
+page = "uid://bkxsu4vhw2wx"
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer" unique_id=521308979]
 layout_mode = 2
@@ -284,7 +347,7 @@ texture_hover = ExtResource("7_tc8yw")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_tc8yw")
-page = "res://Page Scenes/Game Page Scenes/Infinite Dishes Window.tscn"
+page = "uid://b07q35mcq4h7a"
 
 [node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer" unique_id=1843092834]
 layout_mode = 2
@@ -300,4 +363,4 @@ texture_normal = ExtResource("8_fuxn6")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_tc8yw")
-page = null
+page = "uid://cb0fjo84pxpcp"

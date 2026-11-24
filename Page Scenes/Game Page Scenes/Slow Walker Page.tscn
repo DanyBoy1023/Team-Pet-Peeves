@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://4j2fpyqont6d"]
 
 [ext_resource type="PackedScene" uid="uid://cxokwlq838ijo" path="res://Game Scenes/Slow Walker/main.tscn" id="1_1trth"]
+[ext_resource type="Script" uid="uid://v2eb2m3qdxp1" path="res://Page Scenes/Game Page Scenes/intstructions_button.gd" id="2_jpusv"]
 [ext_resource type="Texture2D" uid="uid://cyxbwkoropf1n" path="res://Website Art/Star 2.png" id="2_uswh6"]
 [ext_resource type="FontFile" uid="uid://0bap6swda4l5" path="res://Fonts/chiller.ttf" id="3_i85bm"]
 [ext_resource type="Texture2D" uid="uid://bu43482w1ltbm" path="res://Website Art/Star 4.png" id="4_i8unm"]
 [ext_resource type="Texture2D" uid="uid://cyccbsc1xwu22" path="res://Website Art/Star 5.png" id="5_hd6nh"]
 [ext_resource type="Texture2D" uid="uid://e2w4r6h8e1tx" path="res://Website Art/Star 3.png" id="6_nefx8"]
 [ext_resource type="Texture2D" uid="uid://j1ujbbr1sgbe" path="res://Game Scenes/Roomate Cleaning/Art/sponge.png" id="7_uu2de"]
+[ext_resource type="Texture2D" uid="uid://bho05pu7jnatn" path="res://Game Scenes/Dodge The Coughers Updated/icon.png" id="8_hi2nh"]
 [ext_resource type="Script" uid="uid://cm1ai7eixmvg7" path="res://Scripts/open_page_button.gd" id="8_ij67l"]
 [ext_resource type="Texture2D" uid="uid://cyc84ikibrfyk" path="res://Page Scenes/Cat Page/archie.jpg" id="9_oikae"]
 
@@ -20,6 +22,19 @@ corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpusv"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.6392157, 0.7921569, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
 corner_detail = 5
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uu825"]
@@ -80,13 +95,71 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/Website bg/Label" unique_id=2044089148]
+[node name="Intstructions Button" type="Button" parent="HBoxContainer/VBoxContainer/Website bg/Label" unique_id=2044089148]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_uu825")
 text = "Instructions"
+script = ExtResource("2_jpusv")
+
+[node name="Panel" type="Panel" parent="HBoxContainer/VBoxContainer/Website bg/Label/Intstructions Button" unique_id=179283707]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.4310001
+anchor_top = -8.579
+anchor_right = 2.45
+anchor_bottom = 1.269
+offset_left = 80.20401
+offset_top = 41.63301
+offset_right = -61.800003
+offset_bottom = -32.263
+theme_override_styles/panel = SubResource("StyleBoxFlat_jpusv")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/Website bg/Label/Intstructions Button/Panel" unique_id=648549587]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/Website bg/Label/Intstructions Button/Panel/MarginContainer" unique_id=1496132838]
+layout_mode = 2
+theme_override_constants/separation = 19
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/Website bg/Label/Intstructions Button/Panel/MarginContainer/VBoxContainer" unique_id=2122699376]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SPACE to start"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer/Website bg/Label/Intstructions Button/Panel/MarginContainer/VBoxContainer" unique_id=1061977657]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "SHIFT to sprint"
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer/Website bg/Label/Intstructions Button/Panel/MarginContainer/VBoxContainer" unique_id=2076943403]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "WASD or arrow keys to move around"
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer/Website bg/Label/Intstructions Button/Panel/MarginContainer/VBoxContainer" unique_id=696480637]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Don't stand behing someone for too long..."
+autowrap_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/Website bg" unique_id=878459820]
 layout_mode = 1
@@ -267,6 +340,11 @@ theme_override_constants/margin_bottom = 10
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer/MarginContainer" unique_id=5465121]
 layout_mode = 2
+texture_normal = ExtResource("8_hi2nh")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_ij67l")
+page = "uid://chbhtvwo00ivv"
 
 [node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer" unique_id=521308979]
 layout_mode = 2
@@ -284,7 +362,7 @@ texture_hover = ExtResource("7_uu2de")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_ij67l")
-page = "res://Page Scenes/Game Page Scenes/Infinite Dishes Window.tscn"
+page = "uid://b07q35mcq4h7a"
 
 [node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer/ColorRect/VBoxContainer2/Control2/MarginContainer/VBoxContainer" unique_id=1843092834]
 layout_mode = 2
@@ -300,4 +378,4 @@ texture_normal = ExtResource("9_oikae")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_ij67l")
-page = null
+page = "uid://cb0fjo84pxpcp"

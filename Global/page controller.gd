@@ -69,6 +69,9 @@ func get_loading_bar_anim_player() -> AnimationPlayer:
 	return get_tree().get_first_node_in_group("Loading Bar Animation")
 
 func change_to_scene(_animation_name):
+	if not next_page:
+		loading_bar_anim_player.play("RESET")
+		return
 	# actcually switch to new scene
 	if load_new:
 		load_new_page()

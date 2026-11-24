@@ -34,6 +34,7 @@ agent_radius = 5.0
 
 [node name="Plate" type="Node2D" unique_id=2095467495]
 script = ExtResource("1_wq8s4")
+total_soap = 60
 soap_bubble = ExtResource("2_ub2mq")
 
 [node name="base sprite" type="Sprite2D" parent="." unique_id=1294769918]

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b07q35mcq4h7a"]
+
+[ext_resource type="Texture2D" uid="uid://betcx8qinb2m1" path="res://Website Art/gradient.png" id="1_6vlak"]
+[ext_resource type="PackedScene" uid="uid://bsvjr5j143cti" path="res://Window Scene/Window.tscn" id="1_mm3r0"]
+[ext_resource type="PackedScene" uid="uid://dh1w6tiwwg0vl" path="res://Page Scenes/Game Page Scenes/Infinite Dishes Page.tscn" id="2_7n5qv"]
+[ext_resource type="Script" uid="uid://dvub7iqk10rx7" path="res://Page Scenes/mouse paralax.gd" id="2_qr1u2"]
+
+[node name="Control" type="Control" unique_id=643465008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background2" type="NinePatchRect" parent="." unique_id=553902361]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2707.0
+offset_top = -2858.0
+offset_right = 2728.0
+offset_bottom = 2355.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_rotation = -0.5235988
+texture = ExtResource("1_6vlak")
+region_rect = Rect2(0, 0, 1065, 1065)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_qr1u2")
+
+[node name="Control" type="Control" parent="." unique_id=1950040114]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" parent="Control" unique_id=1910592968 instance=ExtResource("1_mm3r0")]
+layout_mode = 1
+
+[node name="Page Holder" parent="Control/MarginContainer/VBoxContainer/Page Holder" parent_id_path=PackedInt32Array(1910592968, 1493986912) index="0" unique_id=478290195 instance=ExtResource("2_7n5qv")]
+layout_mode = 1
+offset_right = 0.0
+offset_bottom = 0.0
+
+[editable path="Control/MarginContainer"]

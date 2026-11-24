@@ -1,20 +1,22 @@
 [gd_scene format=3 uid="uid://cu4gtqtor86l7"]
 
-[ext_resource type="Texture2D" uid="uid://betcx8qinb2m1" path="res://Website Art/gradient.png" id="1_6xhdm"]
-[ext_resource type="Script" uid="uid://dvub7iqk10rx7" path="res://Page Scenes/mouse paralax.gd" id="2_jtqhn"]
-[ext_resource type="PackedScene" uid="uid://bsvjr5j143cti" path="res://Window Scene/Window.tscn" id="3_sv2du"]
-[ext_resource type="Texture2D" uid="uid://c31mgprqx416j" path="res://icon.svg" id="4_6xhdm"]
-[ext_resource type="Texture2D" uid="uid://sjac8vhbjbex" path="res://Website Art/RageBar.png" id="5_0dyyk"]
-[ext_resource type="FontFile" uid="uid://0bap6swda4l5" path="res://Fonts/chiller.ttf" id="5_cnrcj"]
-[ext_resource type="Texture2D" uid="uid://b4xlql0oioey7" path="res://Game Scenes/Dodge The Coughers/icon.png" id="5_mrl4i"]
-[ext_resource type="Texture2D" uid="uid://bu43482w1ltbm" path="res://Website Art/Star 4.png" id="6_4w15s"]
-[ext_resource type="Texture2D" uid="uid://cyccbsc1xwu22" path="res://Website Art/Star 5.png" id="7_7ynua"]
-[ext_resource type="Texture2D" uid="uid://c1xps4x2bmsb1" path="res://Website Art/GamePageChecker.png" id="8_mrl4i"]
-[ext_resource type="Script" uid="uid://cm1ai7eixmvg7" path="res://Scripts/open_page_button.gd" id="8_tu7n7"]
-[ext_resource type="Texture2D" uid="uid://cyxbwkoropf1n" path="res://Website Art/Star 2.png" id="9_7ynua"]
+[ext_resource type="Texture2D" uid="uid://betcx8qinb2m1" path="res://Website Art/gradient.png" id="1_h7umw"]
+[ext_resource type="Script" uid="uid://dvub7iqk10rx7" path="res://Page Scenes/mouse paralax.gd" id="2_dd7sc"]
+[ext_resource type="PackedScene" uid="uid://bsvjr5j143cti" path="res://Window Scene/Window.tscn" id="3_1pk5u"]
+[ext_resource type="Texture2D" uid="uid://c1xps4x2bmsb1" path="res://Website Art/GamePageChecker.png" id="4_cqdjn"]
+[ext_resource type="FontFile" uid="uid://0bap6swda4l5" path="res://Fonts/chiller.ttf" id="5_5l14b"]
+[ext_resource type="Texture2D" uid="uid://bu43482w1ltbm" path="res://Website Art/Star 4.png" id="6_gqbpa"]
+[ext_resource type="Texture2D" uid="uid://cyccbsc1xwu22" path="res://Website Art/Star 5.png" id="7_vk4kq"]
+[ext_resource type="Script" uid="uid://cm1ai7eixmvg7" path="res://Scripts/open_page_button.gd" id="8_u4waq"]
+[ext_resource type="Script" uid="uid://co0td52512gb" path="res://Scripts/contact_me_button.gd" id="9_1pk5u"]
+[ext_resource type="Texture2D" uid="uid://cyxbwkoropf1n" path="res://Website Art/Star 2.png" id="9_es2ac"]
+[ext_resource type="AudioStream" uid="uid://djamn5vhrthgt" path="res://Audio/extremely loud buzzer.mp3" id="10_cqdjn"]
+[ext_resource type="Texture2D" uid="uid://sjac8vhbjbex" path="res://Website Art/RageBar.png" id="10_o3p48"]
+[ext_resource type="Texture2D" uid="uid://c31mgprqx416j" path="res://icon.svg" id="11_v6kn4"]
+[ext_resource type="Texture2D" uid="uid://b4xlql0oioey7" path="res://Game Scenes/Dodge The Coughers/icon.png" id="12_6jm82"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mrl4i"]
-atlas = ExtResource("8_mrl4i")
+atlas = ExtResource("4_cqdjn")
 region = Rect2(0, 0, 1175, 105)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dyyk"]
@@ -259,11 +261,11 @@ grow_horizontal = 2
 grow_vertical = 2
 offset_transform_enabled = true
 offset_transform_rotation = -0.5235988
-texture = ExtResource("1_6xhdm")
+texture = ExtResource("1_h7umw")
 region_rect = Rect2(0, 0, 1065, 1065)
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
-script = ExtResource("2_jtqhn")
+script = ExtResource("2_dd7sc")
 
 [node name="Window" type="Control" parent="." unique_id=339981141]
 layout_mode = 1
@@ -273,7 +275,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" parent="Window" unique_id=1910592968 instance=ExtResource("3_sv2du")]
+[node name="MarginContainer" parent="Window" unique_id=1910592968 instance=ExtResource("3_1pk5u")]
 layout_mode = 1
 
 [node name="Back Page Button" parent="Window/MarginContainer/VBoxContainer/ColorRect2/MarginContainer/Tabs3" parent_id_path=PackedInt32Array(1910592968, 1552679965) index="0" unique_id=1787904824]
@@ -370,7 +372,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.6862745, 0.9764706, 0.003921569, 1)
-theme_override_fonts/font = ExtResource("5_cnrcj")
+theme_override_fonts/font = ExtResource("5_5l14b")
 theme_override_font_sizes/font_size = 37
 text = "Bob's Torture Website!!!"
 horizontal_alignment = 1
@@ -388,7 +390,7 @@ offset_right = -275.0
 offset_bottom = -13.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_4w15s")
+texture = ExtResource("6_gqbpa")
 expand_mode = 1
 stretch_mode = 5
 
@@ -404,7 +406,7 @@ offset_right = -275.0
 offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("7_7ynua")
+texture = ExtResource("7_vk4kq")
 expand_mode = 1
 stretch_mode = 5
 
@@ -488,8 +490,8 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_tu7n7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bvac1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_is6w7")
 text = "Home"
-script = ExtResource("8_tu7n7")
-page = "res://Page Scenes/Main Page.tscn"
+script = ExtResource("8_u4waq")
+page = "uid://cu4gtqtor86l7"
 
 [node name="Button2" type="Button" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=110558834]
 layout_mode = 2
@@ -502,7 +504,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_2t77w")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_70qea")
 theme_override_styles/hover = SubResource("StyleBoxFlat_dkm7e")
 text = "About Bob"
-script = ExtResource("8_tu7n7")
+script = ExtResource("8_u4waq")
 
 [node name="Button3" type="Button" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1269064044]
 layout_mode = 2
@@ -515,8 +517,8 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_v0e6c")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hp0lh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jjxro")
 text = "Pet Peeves"
-script = ExtResource("8_tu7n7")
-page = "res://Page Scenes/Game Page Scenes/Infinite Dishes Window.tscn"
+script = ExtResource("8_u4waq")
+page = "uid://b07q35mcq4h7a"
 
 [node name="Button4" type="Button" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1520743532]
 layout_mode = 2
@@ -529,10 +531,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_rny2v")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_orucg")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1bc17")
 text = "Games"
-script = ExtResource("8_tu7n7")
-page = "res://Page Scenes/Game Page Scenes/Dodge The Coughers Window.tscn"
+script = ExtResource("8_u4waq")
+page = "uid://chbhtvwo00ivv"
 
-[node name="Button5" type="Button" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1895408106]
+[node name="Contact Button" type="Button" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1895408106]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0.4862745, 0.4862745, 0.16078432, 1)
@@ -543,7 +545,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_hlb6q")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_tem68")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gnjhb")
 text = "Contact Me"
-script = ExtResource("8_tu7n7")
+script = ExtResource("9_1pk5u")
+
+[node name="ExtremelyLoudBuzzer" type="AudioStreamPlayer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/Contact Button" unique_id=1446299510]
+stream = ExtResource("10_cqdjn")
 
 [node name="MarginContainer2" type="MarginContainer" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer" unique_id=717789800]
 layout_mode = 2
@@ -574,13 +579,13 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Panel/VBoxContainer" unique_id=293302643]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "Why Are Pleople So Slow?"
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Panel/VBoxContainer" unique_id=1174498410]
 layout_mode = 2
-theme_override_font_sizes/font_size = 5
+theme_override_font_sizes/font_size = 7
 text = "They never walk as fast as they should or move out of the way, its actually ridiculous how slow some people can be. Plus they never move out of the way when they know they are in the way, like come on!"
 autowrap_mode = 2
 
@@ -600,14 +605,14 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Panel2/VBoxContainer2" unique_id=360746724]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "Why Does No One Know How To Drive?"
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Panel2/VBoxContainer2" unique_id=807921291]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 5
+theme_override_font_sizes/font_size = 7
 text = "Everyone just needs to get off of the road and let me through. It is not that hard to drive in a straight line that curves every now and then. Just GO!"
 autowrap_mode = 2
 
@@ -626,7 +631,7 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Panel3/VBoxContainer2" unique_id=1486626181]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 10
 text = "Why Are Pleople Not Wearing Headphones?"
 autowrap_mode = 2
 
@@ -652,7 +657,7 @@ grow_vertical = 2
 [node name="TextureRect" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Control2/HBoxContainer" unique_id=1727889514]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("9_7ynua")
+texture = ExtResource("9_es2ac")
 expand_mode = 1
 stretch_mode = 5
 
@@ -666,7 +671,7 @@ text = "Use your head, people."
 [node name="TextureRect2" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer2/VBoxContainer/Control2/HBoxContainer" unique_id=54314382]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("9_7ynua")
+texture = ExtResource("9_es2ac")
 expand_mode = 1
 stretch_mode = 5
 
@@ -724,7 +729,7 @@ autowrap_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/VBoxContainer/MarginContainer3/Control2/Panel/MarginContainer/VBoxContainer" unique_id=527447254]
 layout_mode = 2
-texture = ExtResource("5_0dyyk")
+texture = ExtResource("10_o3p48")
 expand_mode = 5
 stretch_mode = 5
 
@@ -822,7 +827,7 @@ theme_override_constants/margin_bottom = 10
 
 [node name="TextureRect" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/HBoxContainer/Side Menu/MarginContainer/VBoxContainer/MarginContainer3" unique_id=46148095]
 layout_mode = 2
-texture = ExtResource("4_6xhdm")
+texture = ExtResource("11_v6kn4")
 expand_mode = 5
 stretch_mode = 5
 
@@ -835,7 +840,7 @@ theme_override_constants/margin_bottom = 10
 
 [node name="TextureRect" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/HBoxContainer/Side Menu/MarginContainer/VBoxContainer/MarginContainer4" unique_id=1573597952]
 layout_mode = 2
-texture = ExtResource("4_6xhdm")
+texture = ExtResource("11_v6kn4")
 expand_mode = 5
 stretch_mode = 5
 
@@ -859,7 +864,7 @@ offset_left = 32.0
 offset_top = 27.0
 offset_right = 99.0
 offset_bottom = 94.0
-texture = ExtResource("4_6xhdm")
+texture = ExtResource("11_v6kn4")
 expand_mode = 3
 stretch_mode = 5
 
@@ -900,7 +905,7 @@ offset_left = 300.0
 offset_top = 179.0
 offset_right = 406.0
 offset_bottom = 289.0
-texture = ExtResource("4_6xhdm")
+texture = ExtResource("11_v6kn4")
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg" unique_id=1531240379]
@@ -982,7 +987,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureButton" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=1333674252]
 layout_mode = 2
-texture_normal = ExtResource("5_mrl4i")
+texture_normal = ExtResource("12_6jm82")
 script = SubResource("GDScript_7ynua")
 
 [node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer" unique_id=561807731]
@@ -996,7 +1001,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer2" unique_id=1403179761]
 layout_mode = 2
-texture = ExtResource("4_6xhdm")
+texture = ExtResource("11_v6kn4")
 
 [node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer2" unique_id=1652403430]
 layout_mode = 2
@@ -1009,12 +1014,14 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer3" unique_id=528226649]
 layout_mode = 2
-texture = ExtResource("4_6xhdm")
+texture = ExtResource("11_v6kn4")
 
 [node name="Label" type="Label" parent="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/HBoxContainer/Main Scroll Website/VBoxContainer/Website bg/HBoxContainer/VBoxContainer3" unique_id=697574501]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "game 3"
 horizontal_alignment = 1
+
+[connection signal="pressed" from="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/Contact Button" to="Window/MarginContainer/VBoxContainer/Page Holder/Home Page/MarginContainer/HBoxContainer/MarginContainer/Panel/MarginContainer/VBoxContainer/Contact Button" method="_on_pressed"]
 
 [editable path="Window/MarginContainer"]

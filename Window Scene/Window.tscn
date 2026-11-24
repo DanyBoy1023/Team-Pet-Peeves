@@ -138,6 +138,22 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.7)
 }
 
+[sub_resource type="Animation" id="Animation_hwbmt"]
+resource_name = "slow then fast"
+length = 3.5
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureProgressBar:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.3, 25.5, 40, -0.40275162, -24.78712, 0, 0, 100, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 2.8, 3.5)
+}
+
 [sub_resource type="Animation" id="Animation_c6hic"]
 resource_name = "slow_loading"
 length = 3.0
@@ -160,6 +176,7 @@ _data = {
 &"RESET": SubResource("Animation_sv2du"),
 &"hangup loading": SubResource("Animation_66a14"),
 &"quick loading": SubResource("Animation_yr65p"),
+&"slow then fast": SubResource("Animation_hwbmt"),
 &"slow_loading": SubResource("Animation_c6hic")
 }
 

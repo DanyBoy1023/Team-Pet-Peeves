@@ -8,7 +8,7 @@ enum page_enum {
 	slow_walk,
 	cat
 }
-@export_file_path("*tscn") var page: String
+@export_file("*.tscn") var page: String
 
 func _ready() -> void:
 	pressed.connect(go_to_page)

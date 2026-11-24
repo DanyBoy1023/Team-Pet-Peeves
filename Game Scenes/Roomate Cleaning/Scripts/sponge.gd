@@ -2,20 +2,33 @@ extends Area2D
 
 var hovering = false
 var grabbed = false
+var reaching = false
 
+@export var grabbed_threshold := 10
 @export var cleaning_strength = 4
 
 var prev_global_position: Vector2
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("grab") and (hovering or is_hovered()):
-		grabbed = true
+	if Input.is_action_just_pressed("grab"):
+		reaching = true
 	if Input.is_action_just_released("grab"):
+		reaching = false
 		grabbed = false
 	
-	if grabbed:
-		global_position = get_global_mouse_position()
+	if grabbed or reaching:
+		var mouse_pos = get_global_mouse_position()
+		if reaching:
+			global_position = lerp(global_position, mouse_pos, .05)
+			var dir := global_position.distance_to(mouse_pos)
+			if dir <= grabbed_threshold:
+				grabbed = true
+				reaching = false
+		if grabbed:
+			global_position = lerp(global_position, mouse_pos, .5)
+		
+		
 		for area in get_overlapping_areas():
 			if area is Soap:
 				var soap : Soap = area

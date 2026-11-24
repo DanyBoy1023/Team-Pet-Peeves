@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://chbhtvwo00ivv"]
 
-[ext_resource type="PackedScene" uid="uid://bkbfhx8xbvnp8" path="res://Page Scenes/Game Page Scenes/Dodge The Coughers Page Updated.tscn" id="2_bjp1d"]
-[ext_resource type="PackedScene" uid="uid://bsvjr5j143cti" path="res://Window Scene/Window.tscn" id="2_psf4k"]
+[ext_resource type="PackedScene" uid="uid://bsvjr5j143cti" path="res://Window Scene/Window.tscn" id="1_tcnbi"]
+[ext_resource type="PackedScene" uid="uid://bkbfhx8xbvnp8" path="res://Page Scenes/Game Page Scenes/Dodge The Coughers Page Updated.tscn" id="2_hqbfo"]
 
 [sub_resource type="Gradient" id="Gradient_sv2du"]
 colors = PackedColorArray(0.7254902, 0, 0.84313726, 1, 1, 0.53333336, 1, 1)
@@ -35,10 +35,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" parent="Control" unique_id=1910592968 instance=ExtResource("2_psf4k")]
+[node name="MarginContainer" parent="Control" unique_id=1910592968 instance=ExtResource("1_tcnbi")]
 layout_mode = 1
 
-[node name="Page Holder" parent="Control/MarginContainer/VBoxContainer/Page Holder" parent_id_path=PackedInt32Array(1910592968, 1493986912) index="0" unique_id=478290195 instance=ExtResource("2_bjp1d")]
+[node name="Page Holder" parent="Control/MarginContainer/VBoxContainer/Page Holder" parent_id_path=PackedInt32Array(1910592968, 1493986912) index="0" unique_id=478290195 instance=ExtResource("2_hqbfo")]
 layout_mode = 1
 offset_right = 0.0
 offset_bottom = 0.0

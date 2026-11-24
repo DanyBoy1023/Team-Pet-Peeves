@@ -1,14 +1,9 @@
 [gd_scene format=3 uid="uid://cb0fjo84pxpcp"]
 
 [ext_resource type="PackedScene" uid="uid://bsvjr5j143cti" path="res://Window Scene/Window.tscn" id="1_o5fqt"]
+[ext_resource type="Texture2D" uid="uid://betcx8qinb2m1" path="res://Website Art/gradient.png" id="1_woyll"]
+[ext_resource type="Script" uid="uid://dvub7iqk10rx7" path="res://Page Scenes/mouse paralax.gd" id="2_05qaw"]
 [ext_resource type="PackedScene" uid="uid://dscuc83mia054" path="res://Page Scenes/Cat Page/cat page.tscn" id="2_as6cb"]
-
-[sub_resource type="Gradient" id="Gradient_sv2du"]
-colors = PackedColorArray(0.7254902, 0, 0.84313726, 1, 1, 0.53333336, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_mubrq"]
-gradient = SubResource("Gradient_sv2du")
-fill_to = Vector2(0, 1)
 
 [node name="Control" type="Control" unique_id=643465008]
 layout_mode = 3
@@ -18,14 +13,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="." unique_id=1426322447]
+[node name="Background2" type="NinePatchRect" parent="." unique_id=1835771586]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2707.0
+offset_top = -2858.0
+offset_right = 2728.0
+offset_bottom = 2355.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_mubrq")
+offset_transform_enabled = true
+offset_transform_rotation = -0.5235988
+texture = ExtResource("1_woyll")
+region_rect = Rect2(0, 0, 1065, 1065)
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_05qaw")
 
 [node name="Control" type="Control" parent="." unique_id=1950040114]
 layout_mode = 1

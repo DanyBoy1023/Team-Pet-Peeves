@@ -4,7 +4,7 @@ extends Node2D
 signal soap_cleaned(percent: float)
 signal all_clean(dish: Dish)
 
-var total_soap = 40
+@export var total_soap := 40
 var cleaned_soap = 0
 
 @onready var nav_region: NavigationRegion2D = $NavigationRegion2D

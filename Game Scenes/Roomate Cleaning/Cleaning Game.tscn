@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://dhghevcpud6sf" path="res://Game Scenes/Roomate Cleaning/Scripts/sponge.gd" id="3_310jr"]
 [ext_resource type="Script" uid="uid://bacqy45h4fkh0" path="res://Game Scenes/Roomate Cleaning/Scripts/dish_stack.gd" id="3_mw57d"]
 [ext_resource type="Script" uid="uid://ygn0awj15apt" path="res://Game Scenes/Roomate Cleaning/Scripts/roomate_controller.gd" id="5_jc43v"]
-[ext_resource type="Texture2D" uid="uid://cnrqhkg8ybiut" path="res://Game Scenes/Roomate Cleaning/Art/IdleK.png" id="5_ypten"]
 [ext_resource type="Texture2D" uid="uid://chwx6i6lqitga" path="res://Game Scenes/Roomate Cleaning/Art/roomate give.png" id="6_ls403"]
 [ext_resource type="Texture2D" uid="uid://j1ujbbr1sgbe" path="res://Game Scenes/Roomate Cleaning/Art/sponge.png" id="6_otq6u"]
 [ext_resource type="Texture2D" uid="uid://cjayqqdtgmxw4" path="res://Game Scenes/Roomate Cleaning/Art/roomate walk 1.png" id="7_jc43v"]
@@ -20,6 +19,16 @@
 [ext_resource type="AudioStream" uid="uid://du4jrg5e375pm" path="res://Game Scenes/Roomate Cleaning/Audio/roomate variation 5.wav" id="17_s544k"]
 [ext_resource type="AudioStream" uid="uid://dh3ii52g5rvdy" path="res://Game Scenes/Roomate Cleaning/Audio/roomate variation 6.wav" id="18_utlg3"]
 [ext_resource type="AudioStream" uid="uid://cihgs15iynhod" path="res://Game Scenes/Roomate Cleaning/Audio/roomate variation long.wav" id="19_r4pj7"]
+[ext_resource type="Texture2D" uid="uid://cmgrcpx4ffwiv" path="res://Game Scenes/Roomate Cleaning/Art/NoHandBGK.png" id="20_l2hcq"]
+[ext_resource type="Texture2D" uid="uid://c21xnl2xnm7xe" path="res://Game Scenes/Roomate Cleaning/Art/NoHandK.png" id="21_6qqdt"]
+[ext_resource type="Texture2D" uid="uid://baogumwqhlvln" path="res://Game Scenes/Roomate Cleaning/Art/Arm Pieces/BicepYesBGK.png" id="22_6qqdt"]
+[ext_resource type="Texture2D" uid="uid://badp0bnv40rt3" path="res://Game Scenes/Roomate Cleaning/Art/Arm Pieces/VictoryK.png" id="22_x8moq"]
+[ext_resource type="Texture2D" uid="uid://hg7tvpf2kreg" path="res://Game Scenes/Roomate Cleaning/Art/Arm Pieces/BicepNoBGK.png" id="23_s544k"]
+[ext_resource type="Texture2D" uid="uid://jhr0cwumqd2d" path="res://Game Scenes/Roomate Cleaning/Art/Arm Pieces/ForearmYesBGK.png" id="24_r4pj7"]
+[ext_resource type="Texture2D" uid="uid://djic2p11faqu4" path="res://Game Scenes/Roomate Cleaning/Art/Arm Pieces/ForearmNoBGK.png" id="25_qr18k"]
+[ext_resource type="Texture2D" uid="uid://bhvwhgaoyvnfv" path="res://Game Scenes/Roomate Cleaning/Art/Arm Pieces/HandYesBGK.png" id="26_25rx1"]
+[ext_resource type="Script" uid="uid://d3u6kvs128fqm" path="res://Game Scenes/Roomate Cleaning/Scripts/bone_fix_scale.gd" id="26_e33f5"]
+[ext_resource type="Texture2D" uid="uid://6h1473juvmkm" path="res://Game Scenes/Roomate Cleaning/Art/Arm Pieces/HandNoBGK.png" id="27_e33f5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(75, 42)
@@ -169,26 +178,26 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:flip_h")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Vector2(353, 267)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
+tracks/1/path = NodePath(".:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(353, 267)]
+"values": [Vector2(0.14274089, 0.14274088)]
 }
 
 [sub_resource type="Animation" id="Animation_fyrlh"]
@@ -196,26 +205,26 @@ resource_name = "get out of here"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:flip_h")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(353, 267), Vector2(860, 267)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.143, 0.143)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5an3y"]
@@ -223,6 +232,43 @@ _data = {
 &"RESET": SubResource("Animation_5an3y"),
 &"get out of here": SubResource("Animation_fyrlh")
 }
+
+[sub_resource type="SkeletonModification2DCCDIK" id="SkeletonModification2DCCDIK_25rx1"]
+target_nodepath = NodePath("../../Sponge Holding Spot/Sponge")
+tip_nodepath = NodePath("shoulder/elbow/Hand/Marker2D")
+ccdik_data_chain_length = 3
+joint_data/0/bone_index = 0
+joint_data/0/bone2d_node = NodePath("shoulder")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = -90.0
+joint_data/0/constraint_angle_max = 79.99997
+joint_data/0/constraint_angle_invert = true
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = false
+joint_data/1/bone_index = 1
+joint_data/1/bone2d_node = NodePath("shoulder/elbow")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = true
+joint_data/1/constraint_angle_min = 120.64798
+joint_data/1/constraint_angle_max = 25.296993
+joint_data/1/constraint_angle_invert = false
+joint_data/1/constraint_in_localspace = true
+joint_data/1/editor_draw_gizmo = true
+joint_data/2/bone_index = 2
+joint_data/2/bone2d_node = NodePath("shoulder/elbow/Hand")
+joint_data/2/rotate_from_joint = false
+joint_data/2/enable_constraint = true
+joint_data/2/constraint_angle_min = 0.0
+joint_data/2/constraint_angle_max = -56.432983
+joint_data/2/constraint_angle_invert = true
+joint_data/2/constraint_in_localspace = true
+joint_data/2/editor_draw_gizmo = true
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_25rx1"]
+enabled = true
+modification_count = 1
+modifications/0 = SubResource("SkeletonModification2DCCDIK_25rx1")
 
 [node name="CleaningGame" type="Node2D" unique_id=1280043204]
 script = ExtResource("1_ohp6v")
@@ -356,6 +402,7 @@ z_index = 5
 position = Vector2(284, 438)
 
 [node name="Sponge" type="Area2D" parent="Sponge Holding Spot" unique_id=418386868]
+visible = false
 script = ExtResource("3_310jr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Sponge Holding Spot/Sponge" unique_id=1845668577]
@@ -388,26 +435,102 @@ pitch_scale = 1.5
 [node name="Timer" type="Timer" parent="Roomate Controller" unique_id=1094448430]
 wait_time = 8.0
 
-[node name="You" type="Sprite2D" parent="." unique_id=448844907]
+[node name="Dishwasher" type="Node2D" parent="." unique_id=69690019]
 z_index = 4
 position = Vector2(353, 267)
 scale = Vector2(0.14274089, 0.14274088)
-texture = ExtResource("5_ypten")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="You" unique_id=339273985]
+[node name="Body Outline" type="Sprite2D" parent="Dishwasher" unique_id=1527382729]
+z_index = 4
+position = Vector2(-105.0854, -174.26697)
+scale = Vector2(1.1134549, 1.1134549)
+texture = ExtResource("20_l2hcq")
+
+[node name="Body" type="Sprite2D" parent="Dishwasher/Body Outline" unique_id=1128382116]
+z_index = 2
+texture = ExtResource("21_6qqdt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dishwasher" unique_id=339273985]
 libraries/ = SubResource("AnimationLibrary_5an3y")
 autoplay = &"RESET"
 
+[node name="Skeleton2D" type="Skeleton2D" parent="Dishwasher" unique_id=514207014]
+modification_stack = SubResource("SkeletonModificationStack2D_25rx1")
+
+[node name="shoulder" type="Bone2D" parent="Dishwasher/Skeleton2D" unique_id=1893629830]
+position = Vector2(595.4846, 259.21094)
+rotation = -1.4725155
+rest = Transform2D(0.99825513, -0.059048213, 0.059048213, 0.99825513, 595.4845, 259.21088)
+script = ExtResource("26_e33f5")
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Bicep Outline" type="Sprite2D" parent="Dishwasher/Skeleton2D/shoulder" unique_id=1398132617]
+position = Vector2(-1120.8687, -508.43158)
+rotation = -0.12566371
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("22_6qqdt")
+
+[node name="Bicep" type="Sprite2D" parent="Dishwasher/Skeleton2D/shoulder/Bicep Outline" unique_id=1685019296]
+z_index = 5
+texture = ExtResource("23_s544k")
+
+[node name="elbow" type="Bone2D" parent="Dishwasher/Skeleton2D/shoulder" unique_id=616636843]
+position = Vector2(-1210.8585, 419.64014)
+rotation = 1.8578209
+rest = Transform2D(0.90410495, 0.42731047, -0.42731047, 0.90410495, -1210.8549, 419.63254)
+script = ExtResource("26_e33f5")
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Forearm Outline" type="Sprite2D" parent="Dishwasher/Skeleton2D/shoulder/elbow" unique_id=1188137152]
+position = Vector2(304.1728, -801.958)
+rotation = 0.17453292
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("24_r4pj7")
+
+[node name="Forearm" type="Sprite2D" parent="Dishwasher/Skeleton2D/shoulder/elbow/Forearm Outline" unique_id=387320186]
+z_index = 5
+texture = ExtResource("25_qr18k")
+
+[node name="Hand" type="Bone2D" parent="Dishwasher/Skeleton2D/shoulder/elbow" unique_id=785616579]
+position = Vector2(-1094.0859, 2.113037)
+rotation = -0.9849413
+scale = Vector2(0.99999994, 0.99999994)
+rest = Transform2D(0.6713729, -0.74111974, 0.74111974, 0.6713729, -1094.0768, 2.1082478)
+auto_calculate_length_and_angle = false
+length = 376.026
+bone_angle = 198.541
+script = ExtResource("26_e33f5")
+metadata/_local_pose_override_enabled_ = true
+
+[node name="Hand Outline" type="Sprite2D" parent="Dishwasher/Skeleton2D/shoulder/elbow/Hand" unique_id=700286290]
+position = Vector2(1172.4506, -1050.4056)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("26_25rx1")
+
+[node name="Hand" type="Sprite2D" parent="Dishwasher/Skeleton2D/shoulder/elbow/Hand/Hand Outline" unique_id=317933006]
+z_index = 5
+texture = ExtResource("27_e33f5")
+
+[node name="Marker2D" type="Marker2D" parent="Dishwasher/Skeleton2D/shoulder/elbow/Hand" unique_id=1365550242]
+position = Vector2(-357.14355, -120.809326)
+
+[node name="Win Sprite" type="Sprite2D" parent="." unique_id=648177246]
+visible = false
+z_index = 11
+position = Vector2(321.291, 243.12498)
+scale = Vector2(0.15828452, 0.1582845)
+texture = ExtResource("22_x8moq")
+
+[connection signal="pressed" from="GUI/Control/Start Menu/Button" to="Music" method="play"]
 [connection signal="pressed" from="GUI/Control/Start Menu/Button" to="GUI/Control/Start Menu" method="hide"]
 [connection signal="pressed" from="GUI/Control/Start Menu/Button" to="Dish Clean Controller" method="grab_dish"]
 [connection signal="pressed" from="GUI/Control/Start Menu/Button" to="Roomate Controller/Timer" method="start"]
-[connection signal="pressed" from="GUI/Control/Start Menu/Button" to="Music" method="play"]
 [connection signal="all_dishes_clean" from="Dish Clean Controller" to="." method="_on_dish_clean_controller_all_dishes_clean"]
 [connection signal="all_dishes_clean" from="Dish Clean Controller" to="GUI/Control/Win Text" method="show"]
 [connection signal="all_dishes_clean" from="Dish Clean Controller" to="Sponge Holding Spot/Sponge" method="_on_dish_clean_controller_all_dishes_clean"]
 [connection signal="all_dishes_clean" from="Dish Clean Controller" to="Roomate Controller" method="_on_dish_clean_controller_all_dishes_clean"]
 [connection signal="all_dishes_clean" from="Dish Clean Controller" to="Roomate Controller/AnimatedSprite2D" method="play" binds= ["end"]]
-[connection signal="all_dishes_clean" from="Dish Clean Controller" to="You/AnimationPlayer" method="play" binds= ["get out of here"]]
+[connection signal="all_dishes_clean" from="Dish Clean Controller" to="Dishwasher/AnimationPlayer" method="play" binds= ["get out of here"]]
 [connection signal="mouse_entered" from="Sponge Holding Spot/Sponge" to="Sponge Holding Spot/Sponge" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Sponge Holding Spot/Sponge" to="Sponge Holding Spot/Sponge" method="_on_mouse_exited"]
 [connection signal="timeout" from="Roomate Controller/Timer" to="Roomate Controller" method="_on_timer_timeout"]
